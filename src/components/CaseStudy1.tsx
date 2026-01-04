@@ -2,7 +2,7 @@ import image_fb9b27202cc8fc39ebf0c93631ee2c8f7df7a625 from 'figma:asset/fb9b2720
 import image_e00a28ccfb5900fb6e4768252b55aec94542958f from 'figma:asset/e00a28ccfb5900fb6e4768252b55aec94542958f.png';
 import image_1747b0d33ee8a253f6eb010f7db29cd7a0177bd8 from 'figma:asset/1747b0d33ee8a253f6eb010f7db29cd7a0177bd8.png';
 import image_bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf from 'figma:asset/bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf.png';
-import image_b6cef2a8e2d956cc5ecdddc7ddd2e4e04d69f818 from 'figma:asset/b6cef2a8e2d956cc5ecdddc7ddd2e4e04d69f818.png';
+import capaspotify from 'figma:asset/capaspotify.png';
 
 import { motion } from "motion/react";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
@@ -111,7 +111,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             }`}
           >
             <img
-              src={image_b6cef2a8e2d956cc5ecdddc7ddd2e4e04d69f818}
+              src={capaspotify.png}
               alt="Case Study Hero"
               className="w-full aspect-[16/9] object-cover"
             />
