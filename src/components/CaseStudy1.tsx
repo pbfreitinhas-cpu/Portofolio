@@ -111,7 +111,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             }`}
           >
             <img
-              src={capaspotify.png}
+               src={capaspotify}
               alt="Case Study Hero"
               className="w-full aspect-[16/9] object-cover"
             />
