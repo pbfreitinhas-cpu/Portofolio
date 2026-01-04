@@ -2,7 +2,7 @@ import image_fb9b27202cc8fc39ebf0c93631ee2c8f7df7a625 from 'figma:asset/fb9b2720
 import image_e00a28ccfb5900fb6e4768252b55aec94542958f from 'figma:asset/e00a28ccfb5900fb6e4768252b55aec94542958f.png';
 import image_1747b0d33ee8a253f6eb010f7db29cd7a0177bd8 from 'figma:asset/1747b0d33ee8a253f6eb010f7db29cd7a0177bd8.png';
 import image_bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf from 'figma:asset/bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf.png';
-import capaspotify from 'figma:asset/capaspotify.png';
+import capaspotify from '../assets/capaspotify.png';
 
 import { motion } from "motion/react";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
