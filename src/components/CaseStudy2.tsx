@@ -496,10 +496,10 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 </div>
                 <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
                   <h4 className="text-[#DBF1FD] mb-2">
-                    Zeigarnik Effect
+                    Choice Paralysis
                   </h4>
                   <p className="text-white/70 leading-relaxed">
-                    Featuring unfinished shows prominently in “Continue Watching” encourages people to complete what they started. This plays on the urge to resolve incomplete tasks, drawing viewers back to wrap up series or movies.
+                    Reducing the number of visible options and highlighting a curated selection helps users decide faster, without feeling overwhelmed. This increases confidence and engagement with the platform.
                   </p>
                 </div>
               </div>
