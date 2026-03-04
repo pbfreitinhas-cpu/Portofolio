@@ -303,21 +303,21 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
                     src={netflixUsabilityTest}
-                    alt="AI approach 2"
+                    alt="Usability Test"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
                     src={netflixDeskResearch}
-                    alt="AI approach 3"
+                    alt="Desk Research"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
                     src={netflixCrazyEight}
-                    alt="AI approach 4"
+                    alt="Crazy Eight"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
