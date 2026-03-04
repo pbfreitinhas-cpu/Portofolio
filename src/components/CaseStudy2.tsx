@@ -6,6 +6,8 @@ import image_ae4c881cd982f24b70fd35f6fa0dfb97c41ef223 from 'figma:asset/ae4c881c
 import image_b638cdda55459d4c3742759cd4c4287b03a2d0e2 from 'figma:asset/b638cdda55459d4c3742759cd4c4287b03a2d0e2.png';
 import image_0e1728a2af02788a73ce6175b3458c8bc9d5c1ed from 'figma:asset/0e1728a2af02788a73ce6175b3458c8bc9d5c1ed.png';
 import image_19897c4fe6e0b443949735d28001a35a658bd493 from 'figma:asset/19897c4fe6e0b443949735d28001a35a658bd493.png';
+import netflixSurvey from "../assets/netflix-survey-insights.png";
+
 // import image_9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1 from 'figma:asset/9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1.png'; // não usado
 
 import { motion } from "motion/react";
@@ -264,7 +266,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                     Surveys and Interviews
                   </h4>
                   <p className="text-white/70 leading-relaxed">
-                    We conducted user surveys and interviews to understand viewing habits and frustrations.
+                    The survey and interview was conducted to understand viewing habits and frustrations.
                   </p>
                 </div>
                 <div>
@@ -280,7 +282,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                     Endless Scrolling and Reducce Cognitive load
                   </h4>
                   <p className="text-white/70 leading-relaxed">
-                    We also heard a strong desire for better guidance – users wanted easier ways to discover content they might enjoy without endless scrolling. These insights confirmed the need to reduce cognitive load and provide trustworthy recommendations (for example, highlighting popular or “For You” picks) to make choosing quicker and more satisfying.
+                    I also heard a strong desire for better guidance – users wanted easier ways to discover content they might enjoy without endless scrolling. These insights confirmed the need to reduce cognitive load and provide trustworthy recommendations (for example, highlighting popular or “For You” picks) to make choosing quicker and more satisfying.
                   </p>
                 </div>
               </div>
@@ -289,8 +291,8 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1761122827167-159d1d272313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjB3aXJlZnJhbWUlMjBza2V0Y2h8ZW58MXx8fHwxNzYxMjgzMjYwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="AI approach 1"
+                    src={netflixSurvey}
+                    alt="Netflix survey insight"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
