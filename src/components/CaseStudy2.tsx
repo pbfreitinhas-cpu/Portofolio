@@ -7,6 +7,10 @@ import image_b638cdda55459d4c3742759cd4c4287b03a2d0e2 from 'figma:asset/b638cdda
 import image_0e1728a2af02788a73ce6175b3458c8bc9d5c1ed from 'figma:asset/0e1728a2af02788a73ce6175b3458c8bc9d5c1ed.png';
 import image_19897c4fe6e0b443949735d28001a35a658bd493 from 'figma:asset/19897c4fe6e0b443949735d28001a35a658bd493.png';
 import netflixSurvey from "../assets/netflix-survey-insights.png";
+import netflixUsabilityTest from "../assets/usability-test-netflix.png";
+import netflixDeskResearch from "../assets/desk-research-netflix.png";
+import netflixCrazyEight from "../assets/crazy-eight-netflix.png";
+
 
 // import image_9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1 from 'figma:asset/9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1.png'; // não usado
 
@@ -298,21 +302,21 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1648134859177-525771773915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcmVzZWFyY2glMjBkYXRhfGVufDF8fHx8MTc2MTI4NzExNXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={netflixUsabilityTest}
                     alt="AI approach 2"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1547194936-28214bd75193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwd29ya2Zsb3d8ZW58MXx8fHwxNzYxMjg3MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={netflixDeskResearch}
                     alt="AI approach 3"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1758598305216-b8cf416cb5b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmZhY2UlMjBtb2NrdXAlMjBzY3JlZW58ZW58MXx8fHwxNzYxMzUzMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={netflixCrazyEight}
                     alt="AI approach 4"
                     className="w-full aspect-video object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
