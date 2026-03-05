@@ -5,7 +5,7 @@ import image_bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf from 'figma:asset/bb7fd3ad
 import capaspotify from '../assets/capaspotify.png';
 import competitorspotify from '../assets/Competitor-spotify.png';
 import surveyspotify from '../assets/survey-spotify.png';
-import brainstormspotify from '../assets/brainstorm-desk-spotify.png'; 
+import brainstormspotify from '../assets/Brainstorm-desk-spotify.png'; 
 
 import { motion } from "motion/react";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
