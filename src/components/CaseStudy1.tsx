@@ -3,6 +3,9 @@ import image_e00a28ccfb5900fb6e4768252b55aec94542958f from 'figma:asset/e00a28cc
 import image_1747b0d33ee8a253f6eb010f7db29cd7a0177bd8 from 'figma:asset/1747b0d33ee8a253f6eb010f7db29cd7a0177bd8.png';
 import image_bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf from 'figma:asset/bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf.png';
 import capaspotify from '../assets/capaspotify.png';
+import competitorspotify from '../assets/Competitor-spotify.png';
+import surveyspotify from '../assets/survey-spotify.png';
+import brainstormspotify from '../assets/brainstorm-desk-spotify.png'; 
 
 import { motion } from "motion/react";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
@@ -193,7 +196,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               </div>
               <div className="col-span-2 md:col-span-1 rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1648134859177-525771773915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcmVzZWFyY2glMjBkYXRhfGVufDF8fHx8MTc2MTI4NzExNXww&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={image_e00a28ccfb5900fb6e4768252b55aec94542958f}
                   alt="Background visual 2"
                   className="w-full h-64 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                 />
@@ -270,22 +273,22 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                 <ImageWithFallback
-                  src={image_e00a28ccfb5900fb6e4768252b55aec94542958f}
-                  alt="Research insight 1"
+                  src={competitorspotify}
+                  alt="competitor"
                   className="w-full aspect-square object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                 />
               </div>
               <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                 <ImageWithFallback
-                  src={image_fb9b27202cc8fc39ebf0c93631ee2c8f7df7a625}
-                  alt="Research insight 2"
+                  src={surveyspotify}
+                  alt="survey"
                   className="w-full aspect-square object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                 />
               </div>
               <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                 <ImageWithFallback
-                  src={image_1747b0d33ee8a253f6eb010f7db29cd7a0177bd8}
-                  alt="Research insight 3"
+                  src={brainstormspotify}
+                  alt="Brainstorm"
                   className="w-full aspect-square object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                 />
               </div>
@@ -334,14 +337,14 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1547194936-28214bd75193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwd29ya2Zsb3d8ZW58MXx8fHwxNzYxMjg3MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={image_1747b0d33ee8a253f6eb010f7db29cd7a0177bd8}
                     alt="Solution detail 1"
                     className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1648134859177-525771773915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcmVzZWFyY2glMjBkYXRhfGVufDF8fHx8MTc2MTI4NzExNXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={image_e00a28ccfb5900fb6e4768252b55aec94542958f}
                     alt="Solution detail 2"
                     className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
