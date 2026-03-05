@@ -543,25 +543,25 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               <h2 className="text-white text-3xl mb-6">Impact &amp; Results</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">65%</div>
-                  <p className="text-white/70">Reduction in design time</p>
+                  <div className="text-4xl text-[#DBF1FD] mb-2">29%</div>
+                  <p className="text-white/70">Reduction in average time-to-choice</p>
                 </div>
                 <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">89%</div>
+                  <div className="text-4xl text-[#DBF1FD] mb-2">39%</div>
                   <p className="text-white/70">
-                    Improvement in accessibility compliance
+                    Increase in confidence of choice
                   </p>
                 </div>
                 <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">3.2x</div>
+                  <div className="text-4xl text-[#DBF1FD] mb-2">2.1x</div>
                   <p className="text-white/70">
-                    Faster component adoption rate
+                    Fewer decision-reversals
                   </p>
                 </div>
                 <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">92%</div>
+                  <div className="text-4xl text-[#DBF1FD] mb-2">75%</div>
                   <p className="text-white/70">
-                    Designer satisfaction score
+                    Stated reduction in choice frustrations
                   </p>
                 </div>
               </div>
