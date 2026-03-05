@@ -10,7 +10,9 @@ import netflixSurvey from "../assets/netflix-survey-insights.png";
 import netflixUsabilityTest from "../assets/usability-test-netflix.png";
 import netflixDeskResearch from "../assets/desk-research-netflix.png";
 import netflixCrazyEight from "../assets/crazy-eight-netflix.png";
-
+import netflixFigmaMake from "../assets/figma-make-netflix.png";
+import netflixBrain from "../assets/brain-netflix.png";
+import netflixNotionAi from "../assets/notion-ai-netlfix.png";
 
 // import image_9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1 from 'figma:asset/9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1.png'; // não usado
 
@@ -439,21 +441,21 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1758598305216-b8cf416cb5b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmZhY2UlMjBtb2NrdXAlMjBzY3JlZW58ZW58MXx8fHwxNzYxMzUzMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="AI design tool 1"
+                    src={netflixFigmaMake}
+                    alt="Figma Make Prototyping"
                     className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1547194936-28214bd75193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwd29ya2Zsb3d8ZW58MXx8fHwxNzYxMjg3MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="AI design tool 2"
+                    src={netflixBrain}
+                    alt="Imagem Ilustrativa"
                     className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1761122827167-159d1d272313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjB3aXJlZnJhbWUlMjBza2V0Y2h8ZW58MXx8fHwxNzYxMjgzMjYwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={netflixNotionAi}
                     alt="AI design tool 3"
                     className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                   />
