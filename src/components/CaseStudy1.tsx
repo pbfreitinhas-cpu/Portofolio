@@ -5,7 +5,12 @@ import image_bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf from 'figma:asset/bb7fd3ad
 import capaspotify from '../assets/capaspotify.png';
 import competitorspotify from '../assets/Competitor-spotify.png';
 import surveyspotify from '../assets/survey-spotify.png';
-import brainstormspotify from '../assets/Brainstorm-desk-spotify.png'; 
+import brainstormspotify from '../assets/Brainstorm-desk-spotify.png';
+import figmaMakespotify from '../assets/figma-make-spotify.png';
+import personagptspotify from '../assets/personas-gpt-spotify.png';
+import cognitivespotify from '../assets/cognitive-spotify.png';
+
+
 
 import { motion } from "motion/react";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
@@ -394,15 +399,15 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1547194936-28214bd75193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwd29ya2Zsb3d8ZW58MXx8fHwxNzYxMjg3MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="AI tools in action"
+                  src={figmaMakespotify}
+                  alt="Make"
                   className="w-full h-56 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                 />
               </div>
               <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1758598305216-b8cf416cb5b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmZhY2UlMjBtb2NrdXAlMjBzY3JlZW58ZW58MXx8fHwxNzYxMzUzMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="AI-assisted design"
+                  src={personagptspotify}
+                  alt="PersonaGPT"
                   className="w-full h-56 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
                 />
               </div>
@@ -446,7 +451,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             {/* Creative Image Layout - Single Wide */}
             <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1648134859177-525771773915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwcmVzZWFyY2glMjBkYXRhfGVufDF8fHx8MTc2MTI4NzExNXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={cognitivespotify}
                 alt="Cognitive biases research"
                 className="w-full h-64 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
               />
