@@ -222,17 +222,20 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
           </motion.div>
 
           <div className="flex flex-col gap-8">
-            {caseStudies.map((study) => (
-              <CaseStudyCard 
-                key={study.id} 
-                number={study.id} 
-                imageUrl={study.imageUrl}
-                onClick={() => onCaseStudyClick(study.id)}
-                theme={theme}
-              />
-            ))}
-          </div>
-        </div>
+  {caseStudies.map((study) => (
+    <div 
+      key={study.id} 
+      onClick={() => study.id !== 3 && onCaseStudyClick(study.id)}
+      style={study.id === 3 ? { cursor: 'not-allowed', opacity: 0.8 } : { cursor: 'pointer' }}
+    >
+      <CaseStudyCard
+        number={study.id}
+        imageUrl={study.imageUrl}
+        theme={theme}
+      />
+    </div>
+  ))}
+</div>
       </section>
 
       {/* About & Tools Section */}

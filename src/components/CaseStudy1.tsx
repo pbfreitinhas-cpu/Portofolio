@@ -468,20 +468,20 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             <h2 className="text-white text-3xl mb-6">Impact & Results</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <div className="text-4xl text-[#DBF1FD] mb-2">58%</div>
-                <p className="text-white/70">Reduction in task completion time</p>
+                <div className="text-4xl text-[#DBF1FD] mb-2">25%</div>
+                <p className="text-white/70">Reduction in gaze-off-road duration</p>
               </div>
               <div>
                 <div className="text-4xl text-[#DBF1FD] mb-2">73%</div>
-                <p className="text-white/70">Increase in user satisfaction scores</p>
+                <p className="text-white/70">Increase in user safety perception</p>
               </div>
               <div>
-                <div className="text-4xl text-[#DBF1FD] mb-2">45%</div>
-                <p className="text-white/70">Decrease in support tickets</p>
+                <div className="text-4xl text-[#DBF1FD] mb-2">1.8s</div>
+                <p className="text-white/70">Faster average task completion time</p>
               </div>
               <div>
-                <div className="text-4xl text-[#DBF1FD] mb-2">2.4x</div>
-                <p className="text-white/70">Increase in daily active users</p>
+                <div className="text-4xl text-[#DBF1FD] mb-2">3.1x</div>
+                <p className="text-white/70">Increase in hands-free interaction usage</p>
               </div>
             </div>
           </motion.div>
