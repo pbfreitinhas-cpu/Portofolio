@@ -207,36 +207,37 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="py-20 px-6 bg-[rgba(0,0,0,0)]">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-16"
-          >
-            <h2 className={`text-4xl md:text-5xl text-center transition-colors duration-1000 ${
-              theme === 'night' ? 'text-white' : 'text-gray-800'
-            }`}>Case Studies</h2>
-          </motion.div>
-
-          <div className="flex flex-col gap-8">
-  {caseStudies.map((study) => (
-    <div 
-      key={study.id} 
-      onClick={() => study.id !== 3 && onCaseStudyClick(study.id)}
-      style={study.id === 3 ? { cursor: 'not-allowed', opacity: 0.8 } : { cursor: 'pointer' }}
+<section id="case-studies" className="py-20 px-6 bg-[rgba(0,0,0,0)]">
+  <div className="max-w-5xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="mb-16"
     >
-      <CaseStudyCard
-        number={study.id}
-        imageUrl={study.imageUrl}
-        theme={theme}
-      />
+      <h2 className={`text-4xl md:text-5xl text-center transition-colors duration-1000 ${
+        theme === 'night' ? 'text-white' : 'text-gray-800'
+      }`}>Case Studies</h2>
+    </motion.div>
+
+    <div className="flex flex-col gap-8">
+      {caseStudies.map((study) => (
+        <div 
+          key={study.id} 
+          onClick={() => study.id !== 3 && onCaseStudyClick(study.id)}
+          style={study.id === 3 ? { cursor: 'not-allowed', opacity: 0.8 } : { cursor: 'pointer' }}
+        >
+          <CaseStudyCard
+            number={study.id}
+            imageUrl={study.imageUrl}
+            theme={theme}
+          />
+        </div>
+      ))}
     </div>
-  ))}
-</div>
-      </section>
+  </div>
+</section>
 
       {/* About & Tools Section */}
       <section className="py-20 px-6">
