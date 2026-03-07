@@ -10,11 +10,22 @@ interface CaseStudyCardProps {
 
 export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: CaseStudyCardProps) {
 
-  const titles: Record<number, string> = {
-    1: "Spotify Driver Mode",
-    2: "Netflix Choice Overload",
-    3: "Crafting the Next Experience"
+  const caseStudies = {
+    1: {
+      title: "Spotify Driver Mode",
+      subtitle: "View Case Study →"
+    },
+    2: {
+      title: "Netflix Choice Overload",
+      subtitle: "View Case Study →"
+    },
+    3: {
+      title: "Crafting the Next Experience",
+      subtitle: "In progress"
+    }
   };
+
+  const current = caseStudies[number as keyof typeof caseStudies];
 
   return (
     <motion.div
@@ -33,7 +44,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
         <ImageWithFallback
           src={imageUrl}
-          alt={titles[number]}
+          alt={current.title}
           className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
         />
       </div>
@@ -43,17 +54,17 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
           ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'
           : 'bg-gradient-to-t from-blue-900/70 via-blue-900/30 to-transparent'
       }`}>
-
-        <h3 className="text-white text-2xl mb-2 transition-colors duration-300 font-bold">
-          {titles[number]}
+        <h3 className="text-white text-2xl mb-2 font-bold">
+          {current.title}
         </h3>
 
-        <p className={`transition-colors duration-300 ${
-          theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-200'
+        <p className={`${
+          number === 3 
+            ? 'text-yellow-300'
+            : theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-200'
         }`}>
-          View Case Study →
+          {current.subtitle}
         </p>
-
       </div>
 
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
