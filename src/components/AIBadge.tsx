@@ -81,7 +81,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         />
       </motion.div>
 
-      <span className="text-sm relative z-10 drop-shadow-md">AI-Enhanced Design</span>
+      <span className="text-sm relative z-10 drop-shadow-md">Don't Click This</span>
     </motion.button>
   );
 }
