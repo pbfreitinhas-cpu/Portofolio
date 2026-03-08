@@ -214,28 +214,30 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 mb-20"
+            className={`backdrop-blur-xl border rounded-2xl p-8 mb-20 transition-all duration-1000 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/60 border-white/30 shadow-lg'
+            }`}
           >
-            <h2 className="text-white text-3xl mb-6">Challenge & Goals</h2>
-            <p className="text-white/70 leading-relaxed mb-4">
+            <h2 className={`text-3xl mb-6 transition-colors duration-1000 ${theme === 'night' ? 'text-white' : 'text-gray-800'}`}>Challenge & Goals</h2>
+            <p className={`leading-relaxed mb-4 transition-colors duration-1000 ${theme === 'night' ? 'text-white/70' : 'text-gray-700'}`}>
               Designing for drivers presents a unique paradox: how do you minimize attention without minimizing control?
             </p>
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                <p className="text-white/70">The challenge was to reduce visual and interaction load, while maintaining access to key music functions — all in a way that is effortless during driving.</p>
+                <p className={`transition-colors duration-1000 ${theme === 'night' ? 'text-white/70' : 'text-gray-700'}`}>The challenge was to reduce visual and interaction load, while maintaining access to key music functions — all in a way that is effortless during driving.</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                <p className="text-white/70">The design had to work in motion, often with one hand, poor lighting, or even voice-only input.</p>
+                <p className={`transition-colors duration-1000 ${theme === 'night' ? 'text-white/70' : 'text-gray-700'}`}>The design had to work in motion, often with one hand, poor lighting, or even voice-only input.</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                <p className="text-white/70">Our goal was to create a dedicated Driver Mode: a fast, intuitive, and distraction-minimized experience for in-transit users.</p>
+                <p className={`transition-colors duration-1000 ${theme === 'night' ? 'text-white/70' : 'text-gray-700'}`}>Our goal was to create a dedicated Driver Mode: a fast, intuitive, and distraction-minimized experience for in-transit users.</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                <p className="text-white/70">It had to feel like Spotify — but optimized for movement, with larger targets, fewer decisions, and context-aware actions.</p>
+                <p className={`transition-colors duration-1000 ${theme === 'night' ? 'text-white/70' : 'text-gray-700'}`}>It had to feel like Spotify — but optimized for movement, with larger targets, fewer decisions, and context-aware actions.</p>
               </div>
             </div>
 
