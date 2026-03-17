@@ -160,7 +160,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
             <h1 className={`mb-6 text-4xl md:text-5xl lg:text-6xl leading-relaxed transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/90' : 'text-gray-800'
             }`}>
-              Hey, I'm Pedro — a designer based on the Gold Coast, passionate about cognitive bias, behavior-driven interfaces, surf, soccer and the intersection of design and artificial intelligence.
+              Hey, I'm Pedro — a designer based on the Gold Coast, passionate about surf, soccer, cognitive bias, behavior-driven interfaces, and the intersection of design and artificial intelligence.
             </h1>
           </motion.div>
 
