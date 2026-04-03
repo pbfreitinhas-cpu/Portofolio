@@ -336,6 +336,8 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
             <a
               href="/resume.pdf"
               download="Pedro_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`group relative flex items-center gap-3 px-6 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden ${
                 theme === 'night'
                   ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30 hover:shadow-[0_0_20px_rgba(219,241,253,0.2)]'
