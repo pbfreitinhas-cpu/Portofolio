@@ -333,17 +333,21 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               <span className="relative z-10">{t('LinkedIn')}</span>
             </button>
 
-            <button className={`group relative flex items-center gap-3 px-6 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30 hover:shadow-[0_0_20px_rgba(219,241,253,0.2)]'
-                : 'bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]'
-            }`}>
+            <a
+              href="/resume.pdf"
+              download="Pedro_Resume.pdf"
+              className={`group relative flex items-center gap-3 px-6 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden ${
+                theme === 'night'
+                  ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30 hover:shadow-[0_0_20px_rgba(219,241,253,0.2)]'
+                  : 'bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]'
+              }`}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-50"></div>
               <FileText className={`w-5 h-5 relative z-10 transition-colors duration-1000 ${
                 theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-600'
               }`} />
               <span className="relative z-10">{t('Resume')}</span>
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
