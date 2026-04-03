@@ -43,7 +43,11 @@ export function Header({ theme = 'night' }: HeaderProps) {
           >
             {t('About')}
           </button>
-          <button
+          <a
+            href="/resume.pdf"
+            download="Pedro_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`px-6 py-2 rounded-lg backdrop-blur-xl border transition-all duration-300 ${
               theme === 'night'
                 ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30'
@@ -51,7 +55,7 @@ export function Header({ theme = 'night' }: HeaderProps) {
             }`}
           >
             {t('Resume')}
-          </button>
+          </a>
           <button
             onClick={toggleLanguage}
             className={`px-6 py-2 rounded-lg backdrop-blur-xl border transition-all duration-300 ${
