@@ -3,6 +3,7 @@ import { CaseStudyCard } from "./CaseStudyCard";
 import { Header } from "./Header";
 import { AIBadge } from "./AIBadge";
 import { Mail, Linkedin, FileText } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 import hero1 from "../assets/fb9b27202cc8fc39ebf0c93631ee2c8f7df7a625.png";
 import hero2 from "../assets/b638cdda55459d4c3742759cd4c4287b03a2d0e2.png";
 import hero3 from "../assets/coming soon 1.png";
@@ -14,6 +15,8 @@ interface PortfolioProps {
 }
 
 export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioProps) {
+  const { t } = useTranslation();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -160,7 +163,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
             <h1 className={`mb-6 text-4xl md:text-5xl lg:text-6xl leading-relaxed transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/90' : 'text-gray-800'
             }`}>
-              Hey, I'm Pedro — a designer based in São Paulo, passionate about surf, soccer, cognitive bias, behavior-driven interfaces, and the intersection of design and artificial intelligence.
+              {t('heroText')}
             </h1>
           </motion.div>
 
@@ -188,7 +191,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               }`}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
-              <span className="relative z-10">View Case Studies</span>
+              <span className="relative z-10">{t('viewCaseStudies')}</span>
             </button>
 
             <button
@@ -200,7 +203,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               }`}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
-              <span className="relative z-10">More About Me</span>
+              <span className="relative z-10">{t('moreAboutMe')}</span>
             </button>
           </motion.div>
         </div>
@@ -218,7 +221,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
     >
       <h2 className={`text-4xl md:text-5xl text-center transition-colors duration-1000 ${
         theme === 'night' ? 'text-white' : 'text-gray-800'
-      }`}>Case Studies</h2>
+      }`}>{t('caseStudies')}</h2>
     </motion.div>
 
     <div className="flex flex-col gap-8">
@@ -257,21 +260,21 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
             >
               <h2 className={`mb-6 text-4xl transition-colors duration-1000 ${
                 theme === 'night' ? 'text-white' : 'text-gray-800'
-              }`}>About Me</h2>
+              }`}>{t('aboutMe')}</h2>
               <p className={`leading-relaxed mb-4 text-xl transition-colors duration-1000 ${
                 theme === 'night' ? 'text-white/70' : 'text-gray-700'
               }`}>
-                I'm a UX/UI designer with a deep interest in cognitive psychology and artificial intelligence. My work focuses on understanding how users think, behave, and make decisions.
+                {t('aboutMeText1')}
               </p>
               <p className={`leading-relaxed mb-4 text-xl transition-colors duration-1000 ${
                 theme === 'night' ? 'text-white/70' : 'text-gray-700'
               }`}>
-                By combining behavioral science with design thinking, I create interfaces that align with natural cognitive patterns and reduce decision fatigue.
+                {t('aboutMeText2')}
               </p>
               <p className={`leading-relaxed text-xl transition-colors duration-1000 ${
                 theme === 'night' ? 'text-white/70' : 'text-gray-700'
               }`}>
-                Currently exploring how AI can augment the design process while maintaining human-centered principles.
+                {t('aboutMeText3')}
               </p>
             </motion.div>
           </div>
@@ -291,11 +294,11 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
           >
             <h2 className={`text-4xl md:text-5xl mb-6 transition-colors duration-1000 ${
               theme === 'night' ? 'text-white' : 'text-gray-800'
-            }`}>Get in touch</h2>
+            }`}>{t('getInTouch')}</h2>
             <p className={`mb-12 text-lg transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/70' : 'text-gray-700'
             }`}>
-              Interested in collaborating or learning more? Let's connect.
+              {t('getInTouchDesc')}
             </p>
           </motion.div>
 
@@ -315,7 +318,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               <Mail className={`w-5 h-5 relative z-10 transition-colors duration-1000 ${
                 theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-600'
               }`} />
-              <span className="relative z-10">Email</span>
+              <span className="relative z-10">{t('Email')}</span>
             </button>
 
             <button className={`group relative flex items-center gap-3 px-6 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden ${
@@ -327,7 +330,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               <Linkedin className={`w-5 h-5 relative z-10 transition-colors duration-1000 ${
                 theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-600'
               }`} />
-              <span className="relative z-10">LinkedIn</span>
+              <span className="relative z-10">{t('LinkedIn')}</span>
             </button>
 
             <button className={`group relative flex items-center gap-3 px-6 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden ${
@@ -339,7 +342,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               <FileText className={`w-5 h-5 relative z-10 transition-colors duration-1000 ${
                 theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-600'
               }`} />
-              <span className="relative z-10">Resume</span>
+              <span className="relative z-10">{t('Resume')}</span>
             </button>
           </motion.div>
 
@@ -355,7 +358,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
             <p className={`text-sm transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/40' : 'text-gray-500'
             }`}>
-              © 2025 Pedro. UX/UI Designer specializing in AI and cognitive bias.
+              {t('copyright')}
             </p>
           </motion.div>
         </div>

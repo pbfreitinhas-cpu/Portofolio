@@ -15,6 +15,7 @@ import cognitivespotify from '../assets/cognitive-spotify.png';
 import { motion } from "motion/react";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useTranslation } from 'react-i18next';
 
 interface CaseStudy1Props {
   onBack: () => void;
@@ -22,6 +23,7 @@ interface CaseStudy1Props {
 }
 
 export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
+  const { t } = useTranslation();
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -77,7 +79,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
           style={{ fontFamily: "'Shadows Into Light', cursive" }}
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back</span>
+          <span>{t('Back')}</span>
         </motion.button>
 
       {/* Hero Section */}
@@ -180,14 +182,16 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
           >
             <h2 className={`text-3xl mb-6 transition-colors duration-1000 ${
               theme === 'night' ? 'text-white' : 'text-gray-800'
-            }`}>Background & Problem</h2>
+            }`}>{t('backgroundProblem')}</h2>
             <p className={`leading-relaxed mb-4 transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/70' : 'text-gray-700'
             }`}>
-              Spotify’s mobile interface was not designed for drivers, yet many users rely on it while commuting. The current UI requires too many taps, displays dense content, and has small touch targets — all of which increase distraction risk behind the wheel. Without a dedicated experience for driving scenarios, users feel frustrated trying to control playback safely. 
+              {t('backgroundProblemText1')}
             </p>
-            <p className="text-white/70 leading-relaxed mb-8">
-              Reports and user feedback reveal that this issue not only impacts user satisfaction, but also creates a serious usability gap that could lead to churn or even safety concerns. This case explores how to adapt Spotify for safer on-road use through intentional UX and cognitive design.
+            <p className={`leading-relaxed mb-8 transition-colors duration-1000 ${
+              theme === 'night' ? 'text-white/70' : 'text-gray-700'
+            }`}>
+              {t('backgroundProblemText2')}
             </p>
 
             {/* Creative Image Layout - Asymmetric Grid */}
