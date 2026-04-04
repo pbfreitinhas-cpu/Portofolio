@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface CaseStudyCardProps {
@@ -9,19 +10,20 @@ interface CaseStudyCardProps {
 }
 
 export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: CaseStudyCardProps) {
+  const { t } = useTranslation();
 
   const caseStudies = {
     1: {
-      title: "Spotify Driver Mode",
-      subtitle: "View Case Study →"
+      title: t("spotifyDriverMode"),
+      subtitle: t("viewCaseStudy")
     },
     2: {
-      title: "Netflix Choice Overload",
-      subtitle: "View Case Study →"
+      title: t("netflixChoiceOverload"),
+      subtitle: t("viewCaseStudy")
     },
     3: {
-      title: "Crafting the Next Experience",
-      subtitle: "In progress"
+      title: t("craftingNextExperience"),
+      subtitle: t("inProgress")
     }
   };
 

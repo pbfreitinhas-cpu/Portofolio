@@ -17,6 +17,7 @@ import netflixNotionAi from "../assets/notion-ai-netlfix.png";
 // import image_9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1 from 'figma:asset/9c8ad3c5a6a89e976e00e78e5aef62336d73c9e1.png'; // não usado
 
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { ArrowLeft, Bot, Brain } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -26,6 +27,7 @@ interface CaseStudy2Props {
 }
 
 export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
+  const { t } = useTranslation();
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -107,7 +109,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 Case Study #2
               </div>
               <h1 className="text-white text-5xl md:text-6xl lg:text-7xl mb-6">
-                Netflix Choice Overload
+                {t("netflixChoiceOverload")}
               </h1>
               <p className="text-white/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
                 Reimagining Netflix’s discovery flow to tackle choice overload with personalization, simplicity, and cognitive-aware design.

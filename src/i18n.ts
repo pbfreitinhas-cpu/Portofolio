@@ -27,7 +27,12 @@ const resources = {
       "copyright": "© 2025 Pedro. UX/UI Designer specializing in AI and cognitive bias.",
       "backgroundProblem": "Background & Problem",
       "backgroundProblemText1": "Spotify's mobile interface was not designed for drivers, yet many users rely on it while commuting. The current UI requires too many taps, displays dense content, and has small touch targets — all of which increase distraction risk behind the wheel. Without a dedicated experience for driving scenarios, users feel frustrated trying to control playback safely.",
-      "backgroundProblemText2": "Reports and user feedback reveal that this issue not only impacts user satisfaction, but also creates a serious usability gap that could lead to churn or even safety concerns. This case explores how to adapt Spotify for safer on-road use through intentional UX and cognitive design."
+      "backgroundProblemText2": "Reports and user feedback reveal that this issue not only impacts user satisfaction, but also creates a serious usability gap that could lead to churn or even safety concerns. This case explores how to adapt Spotify for safer on-road use through intentional UX and cognitive design.",
+      "spotifyDriverMode": "Spotify Driver Mode",
+      "netflixChoiceOverload": "Netflix Choice Overload",
+      "viewCaseStudy": "View Case Study →",
+      "inProgress": "In progress",
+      "craftingNextExperience": "Crafting the Next Experience"
     }
   },
   pt: {
@@ -37,7 +42,7 @@ const resources = {
       "Home": "Início",
       "Back": "Voltar",
       "Language": "Idioma",
-      "heroText": "Oi, eu sou Pedro — um designer baseado em São Paulo, apaixonado por surf, futebol, viés cognitivo, interfaces orientadas por comportamento e a interseção entre design e inteligência artificial.",
+      "heroText": "Oi, eu sou Pedro — um designer em São Paulo, apaixonado por surf, futebol, viés cognitivo, interfaces orientadas por comportamento e a interseção entre design e inteligência artificial.",
       "viewCaseStudies": "Ver Estudos de Caso",
       "moreAboutMe": "Mais Sobre Mim",
       "caseStudies": "Estudos de Caso",
@@ -52,7 +57,12 @@ const resources = {
       "copyright": "© 2025 Pedro. Designer UX/UI especializado em IA e viés cognitivo.",
       "backgroundProblem": "Contexto & Problema",
       "backgroundProblemText1": "A interface móvel do Spotify não foi projetada para motoristas, mas muitos usuários dependem dela durante o deslocamento. A UI atual requer muitos toques, exibe conteúdo denso e tem alvos de toque pequenos — tudo isso aumenta o risco de distração ao volante. Sem uma experiência dedicada para cenários de direção, os usuários se sentem frustrados ao tentar controlar a reprodução com segurança.",
-      "backgroundProblemText2": "Relatórios e feedback dos usuários revelam que esse problema não apenas impacta a satisfação do usuário, mas também cria uma lacuna séria de usabilidade que pode levar à rotatividade ou até mesmo preocupações de segurança. Este caso explora como adaptar o Spotify para uso mais seguro na estrada por meio de design UX e cognitivo intencional."
+      "backgroundProblemText2": "Relatórios e feedback dos usuários revelam que esse problema não apenas impacta a satisfação do usuário, mas também cria uma lacuna séria de usabilidade que pode levar à rotatividade ou até mesmo preocupações de segurança. Este caso explora como adaptar o Spotify para uso mais seguro na estrada por meio de design UX e cognitivo intencional.",
+      "spotifyDriverMode": "Spotify Modo Motorista",
+      "netflixChoiceOverload": "Netflix Sobrecarga de Escolhas",
+      "viewCaseStudy": "Ver Estudo de Caso →",
+      "inProgress": "Em andamento",
+      "craftingNextExperience": "Criando a Próxima Experiência"
     }
   }
 };

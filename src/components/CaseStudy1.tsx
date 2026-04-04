@@ -101,7 +101,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             <h1 className={`text-5xl md:text-6xl lg:text-7xl mb-6 transition-colors duration-1000 ${
               theme === 'night' ? 'text-white' : 'text-gray-800'
             }`}>
-              Spotify Car Mode
+              {t("spotifyDriverMode")}
             </h1>
             <p className={`text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/70' : 'text-gray-700'
