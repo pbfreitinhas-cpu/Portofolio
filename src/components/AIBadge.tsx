@@ -15,11 +15,11 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
       transition={{ duration: 0.6, delay: 0.6 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative inline-flex items-center gap-4 px-7 py-4 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
+      className="relative inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
     >
-      {/* Animated sparkles */}
+      {/* Animated sparkles - decorative */}
       <motion.div
-        className="absolute -top-1 -right-1"
+        className="absolute -top-2 -right-2 pointer-events-none"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.5, 1, 0.5]
@@ -33,9 +33,9 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         <Sparkles className="w-4 h-4 text-yellow-300" />
       </motion.div>
 
-      {/* Theme toggle icon */}
+      {/* Theme toggle icon - decorative */}
       <motion.div
-        className="absolute -top-1 -left-1"
+        className="absolute -top-2 -left-2 pointer-events-none"
         animate={{ 
           rotate: theme === 'day' ? 360 : 0,
         }}
@@ -62,7 +62,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
           repeatDelay: 2,
           ease: "easeInOut"
         }}
-        className="relative"
+        className="relative flex-shrink-0"
       >
         <Bot className="w-5 h-5" />
         
@@ -81,7 +81,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         />
       </motion.div>
 
-      <span className="text-base relative z-10 drop-shadow-md font-semibold font-satoshi">Switch Theme</span>
+      <span className="text-base drop-shadow-md font-semibold font-satoshi whitespace-nowrap">Switch Theme</span>
     </motion.button>
   );
 }
