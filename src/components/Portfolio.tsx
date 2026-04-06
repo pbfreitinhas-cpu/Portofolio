@@ -164,7 +164,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       <Header theme={theme} />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 py-20 relative font-original">
+      <section className="min-h-screen flex items-center justify-center px-6 py-20 relative">
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -222,7 +222,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       </section>
 
       {/* Case Studies Section */}
-<section id="case-studies" className="py-20 px-6 bg-[rgba(0,0,0,0)]">
+<section id="case-studies" className="py-20 px-6 bg-[rgba(0,0,0,0)] font-satoshi">
   <div className="max-w-5xl mx-auto">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -255,7 +255,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
 </section>
 
       {/* About & Tools Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 font-satoshi">
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl mx-auto">
             {/* About Me Card */}
@@ -294,7 +294,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       </section>
 
       {/* Contact Footer Section */}
-      <section id="contact" className={`py-20 px-6 mt-20 transition-all duration-1000 ${
+      <section id="contact" className={`py-20 px-6 mt-20 transition-all duration-1000 font-satoshi ${
         theme === 'night' ? 'bg-[#161C23]' : 'bg-blue-50/50'
       }`}>
         <div className="max-w-4xl mx-auto text-center">

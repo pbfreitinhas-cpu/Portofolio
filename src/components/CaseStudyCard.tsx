@@ -37,7 +37,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       transition={{ duration: 0.5, delay: number * 0.1 }}
       whileHover={{ scale: 1.01, y: -4 }}
       onClick={onClick}
-      className={`group relative overflow-hidden rounded-2xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer ${
+      className={`group relative overflow-hidden rounded-2xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer font-satoshi ${
         theme === 'night'
           ? 'bg-white/5 border-white/10 hover:border-[#DBF1FD]/30'
           : 'bg-white/60 border-white/30 hover:border-blue-500/40 shadow-lg'

@@ -63,8 +63,8 @@
 
 @layer theme {
   :root, :host {
-    --font-sans: 'Satoshi', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-original: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-satoshi: 'Satoshi', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-amber-400: oklch(.828 .189 84.429);
     --color-yellow-300: oklch(.905 .182 98.111);
@@ -2068,6 +2068,6 @@ html {
   inherits: false
 }
 
-.font-original {
-  font-family: var(--font-original);
+.font-satoshi {
+    font-family: var(--font-satoshi);
 }
