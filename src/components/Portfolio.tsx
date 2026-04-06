@@ -196,7 +196,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
           >
             <button
               onClick={() => scrollToSection('case-studies')}
-              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi ${
+              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
                   : 'bg-blue-500/20 border-blue-500/40 text-blue-700 hover:bg-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]'
@@ -208,7 +208,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
 
             <button
               onClick={() => scrollToSection('contact')}
-              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi ${
+              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
                   : 'bg-blue-500/20 border-blue-500/40 text-blue-700 hover:bg-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]'

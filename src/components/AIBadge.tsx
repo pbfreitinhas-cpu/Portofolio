@@ -15,7 +15,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
       transition={{ duration: 0.6, delay: 0.6 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative inline-flex items-center gap-3 px-5 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
+      className="relative inline-flex items-center gap-4 px-7 py-4 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
     >
       {/* Animated sparkles */}
       <motion.div
@@ -81,7 +81,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         />
       </motion.div>
 
-      <span className="text-sm relative z-10 drop-shadow-md">Constrat</span>
+      <span className="text-base relative z-10 drop-shadow-md font-semibold">Contrast</span>
     </motion.button>
   );
 }
