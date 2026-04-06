@@ -88,7 +88,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
           />
         </motion.div>
 
-        <span className="text-base drop-shadow-md font-semibold font-satoshi whitespace-nowrap">Switch Theme</span>
+        <span className="text-base drop-shadow-md font-semibold font-satoshi whitespace-nowrap">Switch Theme!</span>
       </div>
     </motion.button>
   );
