@@ -164,7 +164,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       <Header theme={theme} />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 py-20 relative">
+      <section className="min-h-screen flex items-center justify-center px-6 py-20 relative font-original">
         <div className="max-w-4xl mx-auto text-center relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

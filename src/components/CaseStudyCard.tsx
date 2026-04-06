@@ -51,28 +51,28 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
         />
       </div>
 
-      <div className={`absolute inset-0 flex flex-col justify-end p-8 ${
+      <div className={`absolute inset-0 flex flex-col justify-end p-8 transition-all duration-300 ${
         theme === 'night'
-          ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'
-          : 'bg-gradient-to-t from-blue-900/70 via-blue-900/30 to-transparent'
+          ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
+          : 'bg-gradient-to-t from-blue-900/70 via-blue-900/30 to-transparent group-hover:from-blue-900/85 group-hover:via-blue-900/50 group-hover:to-transparent'
       }`}>
-        <h3 className="text-white text-2xl mb-2 font-bold">
+        <h3 className={`text-2xl mb-2 font-bold transition-all duration-300 ${
+          theme === 'night'
+            ? 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(219,241,253,0.4)]'
+            : 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]'
+        }`}>
           {current.title}
         </h3>
 
-        <p className={`${
+        <p className={`transition-all duration-300 ${
           number === 3 
-            ? 'text-yellow-300'
-            : theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-200'
+            ? 'text-yellow-300 group-hover:text-yellow-200 drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(253,224,71,0.3)]'
+            : theme === 'night' 
+              ? 'text-[#DBF1FD] group-hover:text-[#E8F8FF] drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(219,241,253,0.3)]'
+              : 'text-blue-200 group-hover:text-blue-100 drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(191,219,254,0.3)]'
         }`}>
           {current.subtitle}
         </p>
-      </div>
-
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className={`absolute inset-0 backdrop-blur-sm ${
-          theme === 'night' ? 'bg-[#DBF1FD]/5' : 'bg-blue-500/10'
-        }`} />
       </div>
     </motion.div>
   );
