@@ -81,7 +81,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         />
       </motion.div>
 
-      <span className="text-base relative z-10 drop-shadow-md font-semibold">Contrast</span>
+      <span className="text-base relative z-10 drop-shadow-md font-semibold">Contrast !</span>
     </motion.button>
   );
 }
