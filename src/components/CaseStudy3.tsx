@@ -14,7 +14,7 @@ export function CaseStudy3({ onBack, theme = 'night' }: CaseStudy3Props) {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
       
-      <div className={`min-h-screen relative transition-all duration-1000 ${
+      <div className={`min-h-screen relative transition-all duration-1000 font-satoshi ${
         theme === 'night' 
           ? 'bg-gradient-to-b from-[#0D1117] to-[#121826]' 
           : 'bg-gradient-to-b from-[#87CEEB] via-[#B0D4F1] to-[#E3F2FD]'

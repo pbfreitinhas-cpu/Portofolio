@@ -42,7 +42,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
       />
 
       <div
-        className={`min-h-screen relative transition-all duration-1000 ${
+        className={`min-h-screen relative transition-all duration-1000 font-satoshi ${
           theme === "night"
             ? "bg-gradient-to-b from-[#0D1117] to-[#121826]"
             : "bg-gradient-to-b from-[#87CEEB] via-[#B0D4F1] to-[#E3F2FD]"
