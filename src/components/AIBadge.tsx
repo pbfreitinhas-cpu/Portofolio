@@ -15,11 +15,11 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
       transition={{ duration: 0.6, delay: 0.6 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
+      className="relative inline-flex items-center justify-center px-8 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
     >
       {/* Animated sparkles - decorative */}
       <motion.div
-        className="absolute -top-2 -right-2 pointer-events-none"
+        className="absolute -top-3 -right-3 pointer-events-none"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.5, 1, 0.5]
@@ -35,7 +35,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
 
       {/* Theme toggle icon - decorative */}
       <motion.div
-        className="absolute -top-2 -left-2 pointer-events-none"
+        className="absolute -bottom-3 -left-3 pointer-events-none"
         animate={{ 
           rotate: theme === 'day' ? 360 : 0,
         }}
@@ -50,38 +50,46 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         )}
       </motion.div>
 
-      {/* Animated robot icon */}
-      <motion.div
-        animate={{ 
-          rotate: [0, 5, -5, 0],
-          y: [0, -2, 0]
-        }}
-        transition={{ 
-          duration: 3,
-          repeat: Infinity,
-          repeatDelay: 2,
-          ease: "easeInOut"
-        }}
-        className="relative flex-shrink-0"
-      >
-        <Bot className="w-5 h-5" />
-        
-        {/* Pulsing glow effect */}
+      <div className="inline-flex items-center justify-center gap-2">
+        {/* Animated robot icon */}
         <motion.div
-          className="absolute inset-0 rounded-full blur-md bg-yellow-400/30"
           animate={{ 
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3]
+            rotate: [0, 5, -5, 0],
+            y: [0, -2, 0]
           }}
           transition={{ 
-            duration: 2,
+            duration: 3,
             repeat: Infinity,
+            repeatDelay: 2,
             ease: "easeInOut"
           }}
-        />
-      </motion.div>
+          className="relative flex-shrink-0 flex items-center justify-center"
+        >
+          <Bot className="w-6 h-6" />
+          
+          {/* Pulsing glow effect */}
+          <motion.div
+            className="absolute inset-0 rounded-full blur-md bg-yellow-400/30"
+            animate={{ 
+              scale: [1, 1.5, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            style={{
+              width: '28px',
+              height: '28px',
+              left: '-1px',
+              top: '-1px'
+            }}
+          />
+        </motion.div>
 
-      <span className="text-base drop-shadow-md font-semibold font-satoshi whitespace-nowrap">Switch Theme</span>
+        <span className="text-base drop-shadow-md font-semibold font-satoshi whitespace-nowrap">Switch Theme</span>
+      </div>
     </motion.button>
   );
 }
