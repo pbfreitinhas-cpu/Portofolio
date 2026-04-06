@@ -35,7 +35,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
 
       {/* Theme toggle icon - decorative */}
       <motion.div
-        className="absolute -top-3 -right-3 pointer-events-none"
+        className="absolute top-0 right-1 pointer-events-none"
         animate={{ 
           rotate: theme === 'day' ? 360 : 0,
         }}
@@ -44,9 +44,9 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         }}
       >
         {theme === 'night' ? (
-          <Moon className="w-4 h-4 text-yellow-300" />
+          <Moon className="w-5 h-5 text-yellow-300" />
         ) : (
-          <Sun className="w-4 h-4 text-yellow-300" />
+          <Sun className="w-5 h-5 text-yellow-300" />
         )}
       </motion.div>
 
