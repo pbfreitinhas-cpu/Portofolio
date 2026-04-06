@@ -15,11 +15,11 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
       transition={{ duration: 0.6, delay: 0.6 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative inline-flex items-center justify-center px-8 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]"
+      className="relative px-6 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)] overflow-hidden"
     >
-      {/* Animated sparkles - decorative */}
+      {/* Sparkles - bottom left corner */}
       <motion.div
-        className="absolute -top-3 -right-3 pointer-events-none"
+        className="absolute -bottom-2 -left-2 pointer-events-none"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.5, 1, 0.5]
@@ -30,12 +30,12 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
           ease: "easeInOut"
         }}
       >
-        <Sparkles className="w-4 h-4 text-yellow-300" />
+        <Sparkles className="w-5 h-5 text-yellow-300" />
       </motion.div>
 
-      {/* Theme toggle icon - decorative */}
+      {/* Moon/Sun - top right corner */}
       <motion.div
-        className="absolute -top-2 -right-2 pointer-events-none"
+        className="absolute -top-2.5 -right-2.5 pointer-events-none"
         animate={{ 
           rotate: theme === 'day' ? 360 : 0,
         }}
@@ -44,18 +44,19 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         }}
       >
         {theme === 'night' ? (
-          <Moon className="w-5 h-5 text-yellow-300" />
+          <Moon className="w-6 h-6 text-yellow-300" />
         ) : (
-          <Sun className="w-5 h-5 text-yellow-300" />
+          <Sun className="w-6 h-6 text-yellow-300" />
         )}
       </motion.div>
 
-      <div className="inline-flex items-center justify-center gap-2">
-        {/* Animated robot icon */}
+      {/* Main content - bot icon + text */}
+      <div className="flex items-center gap-3">
+        {/* Bot Icon with glow */}
         <motion.div
           animate={{ 
-            rotate: [0, 5, -5, 0],
-            y: [0, -2, 0]
+            rotate: [0, 8, -8, 0],
+            y: [0, -3, 0]
           }}
           transition={{ 
             duration: 3,
@@ -63,16 +64,16 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
             repeatDelay: 2,
             ease: "easeInOut"
           }}
-          className="relative flex-shrink-0 flex items-center justify-center"
+          className="relative flex-shrink-0"
         >
-          <Bot className="w-6 h-6" />
+          <Bot className="w-5 h-5 relative z-10" />
           
-          {/* Pulsing glow effect */}
+          {/* Pulsing glow behind bot */}
           <motion.div
-            className="absolute inset-0 rounded-full blur-md bg-yellow-400/30"
+            className="absolute inset-0 rounded-full blur-md bg-yellow-400/40"
             animate={{ 
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.6, 0.3]
+              scale: [1, 1.4, 1],
+              opacity: [0.4, 0.8, 0.4]
             }}
             transition={{ 
               duration: 2,
@@ -80,15 +81,16 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
               ease: "easeInOut"
             }}
             style={{
-              width: '28px',
-              height: '28px',
-              left: '-1px',
-              top: '-1px'
+              width: '24px',
+              height: '24px',
+              left: '-2px',
+              top: '-2px'
             }}
           />
         </motion.div>
 
-        <span className="text-base drop-shadow-md font-semibold font-satoshi whitespace-nowrap">Switch Theme!</span>
+        {/* Text */}
+        <span className="text-sm font-semibold font-satoshi drop-shadow-md">Switch Theme</span>
       </div>
     </motion.button>
   );
