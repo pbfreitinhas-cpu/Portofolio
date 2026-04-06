@@ -35,7 +35,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
 
       {/* Theme toggle icon - decorative */}
       <motion.div
-        className="absolute -bottom-3 -left-3 pointer-events-none"
+        className="absolute -top-3 -right-3 pointer-events-none"
         animate={{ 
           rotate: theme === 'day' ? 360 : 0,
         }}
