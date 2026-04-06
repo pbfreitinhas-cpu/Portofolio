@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Sparkles, Sun, Moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 interface AIBadgeProps {
   theme: 'night' | 'day';
@@ -17,23 +17,6 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
       whileTap={{ scale: 0.95 }}
       className="relative px-6 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)] overflow-hidden"
     >
-      {/* Sparkles - bottom left corner */}
-      <motion.div
-        className="absolute -bottom-2 -left-2 pointer-events-none"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.5, 1, 0.5]
-        }}
-        transition={{ 
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <Sparkles className="w-5 h-5 text-yellow-300" />
-      </motion.div>
-
-
       {/* Main content - theme icon + text */}
       <div className="flex items-center gap-2">
         {/* Theme Icon with animation */}
