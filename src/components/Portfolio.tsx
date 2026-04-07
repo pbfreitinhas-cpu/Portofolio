@@ -199,10 +199,24 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
-                  : 'bg-blue-500/20 border-blue-500/40 text-blue-700 hover:bg-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]'
+                  : 'bg-blue-700/80 border-blue-600/60 text-white hover:bg-blue-700/95 hover:border-blue-500/80 shadow-[0_8px_32px_rgba(29,78,216,0.4)] hover:shadow-[0_12px_40px_rgba(29,78,216,0.6)]'
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
+              {theme === 'day' && (
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  animate={{
+                    x: [-100, 100],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut"
+                  }}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-50"></div>
               <span className="relative z-10">{t('viewCaseStudies')}</span>
             </button>
 
@@ -211,10 +225,24 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
-                  : 'bg-blue-500/20 border-blue-500/40 text-blue-700 hover:bg-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]'
+                  : 'bg-blue-700/80 border-blue-600/60 text-white hover:bg-blue-700/95 hover:border-blue-500/80 shadow-[0_8px_32px_rgba(29,78,216,0.4)] hover:shadow-[0_12px_40px_rgba(29,78,216,0.6)]'
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
+              {theme === 'day' && (
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  animate={{
+                    x: [-100, 100],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut"
+                  }}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-50"></div>
               <span className="relative z-10">{t('moreAboutMe')}</span>
             </button>
           </motion.div>
@@ -231,9 +259,54 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       transition={{ duration: 0.6 }}
       className="mb-16"
     >
-      <h2 className={`text-4xl md:text-5xl text-center transition-colors duration-1000 ${
-        theme === 'night' ? 'text-white' : 'text-gray-800'
-      }`}>{t('caseStudies')}</h2>
+      <div className="relative">
+        {theme === 'day' && (
+          <>
+            {/* Animated background glow */}
+            <motion.div
+              className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400/30 via-cyan-300/30 to-blue-400/30 blur-3xl"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.5, 0.8, 0.5],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              style={{ transform: 'translateY(10px)' }}
+            />
+            
+            {/* Shine effect */}
+            <motion.div
+              className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/40 to-transparent"
+              animate={{
+                x: [-200, 200],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut"
+              }}
+            />
+          </>
+        )}
+        
+        <h2 
+          className={`text-4xl md:text-5xl lg:text-6xl text-center transition-all duration-1000 font-bold relative z-10 ${
+            theme === 'night' 
+              ? 'text-white' 
+              : 'bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-600 bg-clip-text text-transparent drop-shadow-lg'
+          }`}
+          style={theme === 'day' ? {
+            textShadow: '0 8px 24px rgba(30, 144, 255, 0.3), 0 0 40px rgba(34, 211, 238, 0.2)',
+            letterSpacing: '0.05em'
+          } : {}}
+        >
+          {t('caseStudies')}
+        </h2>
+      </div>
     </motion.div>
 
     <div className="flex flex-col gap-8">
