@@ -37,29 +37,31 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       transition={{ duration: 0.5, delay: number * 0.1 }}
       whileHover={{ scale: 1.01, y: -4 }}
       onClick={onClick}
-      className={`group relative overflow-hidden rounded-2xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer font-satoshi ${
+      className={`group relative overflow-hidden rounded-3xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer font-satoshi ${
         theme === 'night'
           ? 'bg-white/5 border-white/10 hover:border-[#DBF1FD]/30'
-          : 'bg-gradient-to-br from-blue-50/95 to-blue-100/85 border-blue-200/60 hover:border-blue-400/70 shadow-[0_8px_24px_rgba(59,130,246,0.15)] hover:shadow-[0_12px_32px_rgba(59,130,246,0.25)]'
+          : 'bg-gradient-to-br from-white via-blue-50 to-white border-2 border-white/80 hover:border-white shadow-[0_10px_40px_rgba(31,78,121,0.2)] hover:shadow-[0_20px_60px_rgba(31,78,121,0.35)] ring-1 ring-blue-100 hover:ring-blue-200'
       }`}
     >
       <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
         <ImageWithFallback
           src={imageUrl}
           alt={current.title}
-          className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            theme === 'day' ? 'opacity-70 group-hover:opacity-85' : 'opacity-60 group-hover:opacity-80'
+          }`}
         />
       </div>
 
       <div className={`absolute inset-0 flex flex-col justify-end p-8 transition-all duration-300 ${
         theme === 'night'
           ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
-          : 'bg-gradient-to-t from-blue-600/75 via-blue-500/40 to-transparent group-hover:from-blue-700/85 group-hover:via-blue-600/60 group-hover:to-transparent'
+          : 'bg-gradient-to-t from-slate-700/85 via-slate-600/50 to-transparent group-hover:from-slate-800/95 group-hover:via-slate-700/70 group-hover:to-transparent'
       }`}>
         <h3 className={`text-2xl mb-2 font-bold transition-all duration-300 ${
           theme === 'night'
             ? 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(219,241,253,0.4)]'
-            : 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]'
+            : 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_14px_rgba(15,23,42,0.6)]'
         }`}>
           {current.title}
         </h3>
@@ -69,7 +71,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
             ? 'text-yellow-300 group-hover:text-yellow-200 drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(253,224,71,0.3)]'
             : theme === 'night' 
               ? 'text-[#DBF1FD] group-hover:text-[#E8F8FF] drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(219,241,253,0.3)]'
-              : 'text-blue-200 group-hover:text-blue-100 drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(191,219,254,0.3)]'
+              : 'text-cyan-100 group-hover:text-white drop-shadow-md group-hover:drop-shadow-[0_0_10px_rgba(15,23,42,0.5)]'
         }`}>
           {current.subtitle}
         </p>
