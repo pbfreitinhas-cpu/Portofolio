@@ -86,7 +86,10 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
           {current.title}
         </h3>
 
-        <p className={`transition-all duration-300 ${subtitleClasses}`}>
+        <p
+          className={`transition-all duration-300 ${subtitleClasses}`}
+          style={number === 3 ? { color: '#fcd34d' } : undefined}
+        >
           {current.subtitle}
         </p>
       </div>
