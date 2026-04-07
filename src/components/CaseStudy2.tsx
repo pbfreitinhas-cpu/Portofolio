@@ -30,43 +30,54 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
   const { t } = useTranslation();
 
   // Glassmorphism helpers
+  // Novos estilos para Day Mode: contraste alto, fundo branco, bordas suaves, espaçamento generoso, fontes grandes
   const glass = theme === 'day'
-    ? "bg-white/60 backdrop-blur-lg border border-white/70 shadow-lg"
+    ? "bg-white border border-gray-200 shadow-lg"
     : "bg-white/5 border-white/10";
   const glassCard = theme === 'day'
-    ? "bg-white/70 backdrop-blur-xl border border-white/80 shadow-md"
+    ? "bg-gray-50 border border-gray-200 shadow-md"
     : "bg-white/5 border-white/10";
   const textMain = theme === 'day' ? "text-gray-900" : "text-white";
   const textSubtle = theme === 'day' ? "text-gray-700" : "text-white/70";
-  const accent = theme === 'day' ? "text-blue-700" : "text-[#DBF1FD]";
+  const accent = theme === 'day' ? "text-blue-800 font-bold" : "text-[#DBF1FD]";
   const accentBg = theme === 'day' ? "bg-blue-100" : "bg-[#DBF1FD]/10";
   const borderAccent = theme === 'day' ? "border-blue-300" : "border-[#DBF1FD]/30";
 
+  // Ajustes de espaçamento e fontes para Day Mode
+  const sectionPad = theme === 'day' ? "px-6 py-12 md:py-16" : "px-4 py-8";
+  const cardPad = theme === 'day' ? "p-8 md:p-10" : "p-6";
+  const heading = theme === 'day' ? "text-3xl md:text-4xl font-extrabold tracking-tight" : "text-2xl font-bold";
+  const subheading = theme === 'day' ? "text-xl md:text-2xl font-semibold" : "text-lg font-semibold";
+  const paragraph = theme === 'day' ? "text-lg md:text-xl leading-relaxed" : "text-base leading-relaxed";
+  const listItem = theme === 'day' ? "text-base md:text-lg pl-2" : "text-base pl-2";
+
   return (
-    <main className="min-h-screen font-satoshi bg-transparent">
+    <main className={theme === 'day' ? "min-h-screen font-satoshi bg-white text-gray-900" : "min-h-screen font-satoshi bg-transparent"}>
       {/* Back Button */}
       <button
         onClick={onBack}
-        className={`fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-all duration-300 ${glass}`}
+        className={theme === 'day'
+          ? "fixed top-6 left-6 z-50 flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-700 text-white hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 text-lg font-semibold shadow-lg"
+          : `fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-all duration-300 ${glass}`}
         aria-label={t('Back')}
         tabIndex={0}
       >
-        <ArrowLeft className="w-4 h-4" />
+        <ArrowLeft className="w-5 h-5" />
         <span className="font-medium">{t('Back')}</span>
       </button>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center px-4 pt-24 pb-12">
-        <div className={`mb-6 px-5 py-2 rounded-full font-semibold text-sm tracking-wide ${accentBg} ${accent} border ${borderAccent}`}>Case Study #2</div>
-        <h1 className={`text-4xl md:text-5xl font-bold mb-4 text-center leading-tight ${textMain}`}>{t("netflixChoiceOverload")}</h1>
-        <p className={`text-lg md:text-xl max-w-2xl text-center mb-8 ${textSubtle}`}>Reimagining Netflix’s discovery flow to tackle choice overload with personalization, simplicity, and cognitive-aware design.</p>
-        <div className={`w-full max-w-3xl rounded-2xl overflow-hidden ${glass} mb-8`}>
+      <section className={`flex flex-col items-center justify-center ${sectionPad} pt-28`}> 
+        <div className={`mb-8 px-6 py-3 rounded-full font-bold text-lg tracking-wide ${accentBg} ${accent} border ${borderAccent} shadow-sm`}>Case Study #2</div>
+        <h1 className={`mb-4 text-center leading-tight ${heading} ${textMain}`}>{t("netflixChoiceOverload")}</h1>
+        <p className={`max-w-2xl text-center mb-10 ${paragraph} ${textSubtle}`}>Reimagining Netflix’s discovery flow to tackle choice overload with personalization, simplicity, and cognitive-aware design.</p>
+        <div className={`w-full max-w-3xl rounded-3xl overflow-hidden ${glass} mb-10 shadow-xl`}>
           <ImageWithFallback src={img_b638cdda55} alt="Case Study Hero" className="w-full aspect-[16/9] object-cover" />
         </div>
       </section>
 
       {/* Overview Cards */}
-      <section className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-16">
+      <section className={`max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 ${sectionPad} pt-0 pb-0`}> 
         {[
           { label: "Role", value: "UX/UI Designer" },
           { label: "Timeline", value: "12 weeks" },
@@ -74,49 +85,49 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
         ].map((item) => (
           <div
             key={item.label}
-            className={`rounded-xl p-6 flex flex-col items-center text-center ${glassCard} transition-shadow duration-200 focus-within:ring-2 focus-within:ring-blue-400`}
+            className={`rounded-2xl ${cardPad} flex flex-col items-center text-center ${glassCard} transition-shadow duration-200 focus-within:ring-2 focus-within:ring-blue-400 outline-none focus:ring-2 focus:ring-blue-400`}
             tabIndex={0}
             aria-label={item.label}
           >
             <span className={`mb-2 text-base font-semibold uppercase tracking-wider ${accent}`}>{item.label}</span>
-            <span className={`text-lg font-medium ${textMain}`}>{item.value}</span>
+            <span className={`text-xl font-bold ${textMain}`}>{item.value}</span>
           </div>
         ))}
       </section>
 
       {/* Problem Section */}
-      <section className={`max-w-3xl mx-auto mb-16 px-4 py-8 rounded-2xl ${glass}`}>
-        <h2 className={`text-2xl font-bold mb-4 ${textMain}`}>Background &amp; Problem</h2>
-        <p className={`mb-3 text-base leading-relaxed ${textSubtle}`}>Netflix is a global streaming platform offering thousands of movies and shows on-demand. However, this vast library can overwhelm users — many people spend a long time browsing and still feel indecisive about what to watch.</p>
-        <p className={`mb-6 text-base leading-relaxed ${textSubtle}`}>This case study addresses that issue by refining Netflix’s content discovery experience to reduce decision fatigue and help viewers find something they will love faster.</p>
-        <div className="grid grid-cols-2 gap-4">
-          <ImageWithFallback src={img_19897c4fe6} alt="Background visual 1" className="w-full h-40 object-cover rounded-lg" />
+      <section className={`max-w-3xl mx-auto mb-16 rounded-3xl ${glass} ${sectionPad}`}> 
+        <h2 className={`mb-4 ${heading} ${textMain}`}>Background &amp; Problem</h2>
+        <p className={`mb-3 ${paragraph} ${textSubtle}`}>Netflix is a global streaming platform offering thousands of movies and shows on-demand. However, this vast library can overwhelm users — many people spend a long time browsing and still feel indecisive about what to watch.</p>
+        <p className={`mb-8 ${paragraph} ${textSubtle}`}>This case study addresses that issue by refining Netflix’s content discovery experience to reduce decision fatigue and help viewers find something they will love faster.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ImageWithFallback src={img_19897c4fe6} alt="Background visual 1" className="w-full h-48 object-cover rounded-2xl" />
           <div className="space-y-4">
-            <ImageWithFallback src={img_0e1728a2af} alt="Background visual 2" className="w-full h-20 object-cover rounded-lg" />
-            <ImageWithFallback src={img_79d010f0e0} alt="Background visual 3" className="w-full h-20 object-cover rounded-lg" />
+            <ImageWithFallback src={img_0e1728a2af} alt="Background visual 2" className="w-full h-20 object-cover rounded-2xl" />
+            <ImageWithFallback src={img_79d010f0e0} alt="Background visual 3" className="w-full h-20 object-cover rounded-2xl" />
           </div>
         </div>
       </section>
 
       {/* Challenge & Goals */}
-      <section className={`max-w-3xl mx-auto mb-16 px-4 py-8 rounded-2xl ${glass}`}>
-        <h2 className={`text-2xl font-bold mb-4 ${textMain}`}>Challenge &amp; Goals</h2>
-        <ul className="space-y-3 mb-6 pl-4 list-disc">
-          <li className={textSubtle}>Minimize the paradox of choice without sacrificing variety.</li>
-          <li className={textSubtle}>Streamline decision-making with personalized, intuitive guidance.</li>
-          <li className={textSubtle}>Help users start watching sooner and boost satisfaction.</li>
+      <section className={`max-w-3xl mx-auto mb-16 rounded-3xl ${glass} ${sectionPad}`}> 
+        <h2 className={`mb-4 ${heading} ${textMain}`}>Challenge &amp; Goals</h2>
+        <ul className="space-y-4 mb-8 pl-6 list-disc">
+          <li className={`${listItem} ${textSubtle}`}>Minimize the paradox of choice without sacrificing variety.</li>
+          <li className={`${listItem} ${textSubtle}`}>Streamline decision-making with personalized, intuitive guidance.</li>
+          <li className={`${listItem} ${textSubtle}`}>Help users start watching sooner and boost satisfaction.</li>
         </ul>
-        <div className="grid grid-cols-3 gap-4">
-          <ImageWithFallback src={img_fea9d31ed7} alt="Challenge visual 1" className="w-full h-32 object-cover rounded-lg" />
-          <ImageWithFallback src={img_79d010f0e0} alt="Challenge visual 2" className="w-full h-32 object-cover rounded-lg" />
-          <ImageWithFallback src={img_ae4c881cd9} alt="Challenge visual 3" className="w-full h-32 object-cover rounded-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ImageWithFallback src={img_fea9d31ed7} alt="Challenge visual 1" className="w-full h-40 object-cover rounded-2xl" />
+          <ImageWithFallback src={img_79d010f0e0} alt="Challenge visual 2" className="w-full h-40 object-cover rounded-2xl" />
+          <ImageWithFallback src={img_ae4c881cd9} alt="Challenge visual 3" className="w-full h-40 object-cover rounded-2xl" />
         </div>
       </section>
 
       {/* Research & Insights */}
-      <section className={`max-w-3xl mx-auto mb-16 px-4 py-8 rounded-2xl ${glass}`}>
-        <h2 className={`text-2xl font-bold mb-4 ${textMain}`}>Research & Insights</h2>
-        <div className="space-y-6 mb-8">
+      <section className={`max-w-3xl mx-auto mb-16 rounded-3xl ${glass} ${sectionPad}`}> 
+        <h2 className={`mb-4 ${heading} ${textMain}`}>Research & Insights</h2>
+        <div className="space-y-6 mb-10">
           <div>
             <h4 className={`mb-2 font-semibold ${accent}`}>Surveys and Interviews</h4>
             <p className={textSubtle}>The survey and interview was conducted to understand viewing habits and frustrations.</p>
@@ -130,32 +141,32 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
             <p className={textSubtle}>Users wanted easier ways to discover content they might enjoy without endless scrolling. These insights confirmed the need to reduce cognitive load and provide trustworthy recommendations (for example, highlighting popular or “For You” picks) to make choosing quicker and more satisfying.</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <ImageWithFallback src={netflixSurvey} alt="Netflix survey insight" className="w-full aspect-video object-cover rounded-lg" />
-          <ImageWithFallback src={netflixUsabilityTest} alt="Usability Test" className="w-full aspect-video object-cover rounded-lg" />
-          <ImageWithFallback src={netflixDeskResearch} alt="Desk Research" className="w-full aspect-video object-cover rounded-lg" />
-          <ImageWithFallback src={netflixCrazyEight} alt="Crazy Eight" className="w-full aspect-video object-cover rounded-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ImageWithFallback src={netflixSurvey} alt="Netflix survey insight" className="w-full aspect-video object-cover rounded-2xl" />
+          <ImageWithFallback src={netflixUsabilityTest} alt="Usability Test" className="w-full aspect-video object-cover rounded-2xl" />
+          <ImageWithFallback src={netflixDeskResearch} alt="Desk Research" className="w-full aspect-video object-cover rounded-2xl" />
+          <ImageWithFallback src={netflixCrazyEight} alt="Crazy Eight" className="w-full aspect-video object-cover rounded-2xl" />
         </div>
       </section>
 
       {/* Solution */}
-      <section className={`max-w-3xl mx-auto mb-16 px-4 py-8 rounded-2xl ${glass}`}>
-        <h2 className={`text-2xl font-bold mb-4 ${textMain}`}>The Solution</h2>
-        <ul className="space-y-3 mb-6 pl-4 list-disc">
-          <li className={textSubtle}>Guided, user-centric browsing for effortless choices.</li>
-          <li className={textSubtle}>“Help Me Choose” feature for tailored recommendations.</li>
-          <li className={textSubtle}>Home screen simplified to show fewer, more relevant titles.</li>
-          <li className={textSubtle}>Social-proof cues (e.g. “Trending Now”) for confidence in selections.</li>
+      <section className={`max-w-3xl mx-auto mb-16 rounded-3xl ${glass} ${sectionPad}`}> 
+        <h2 className={`mb-4 ${heading} ${textMain}`}>The Solution</h2>
+        <ul className="space-y-4 mb-8 pl-6 list-disc">
+          <li className={`${listItem} ${textSubtle}`}>Guided, user-centric browsing for effortless choices.</li>
+          <li className={`${listItem} ${textSubtle}`}>“Help Me Choose” feature for tailored recommendations.</li>
+          <li className={`${listItem} ${textSubtle}`}>Home screen simplified to show fewer, more relevant titles.</li>
+          <li className={`${listItem} ${textSubtle}`}>Social-proof cues (e.g. “Trending Now”) for confidence in selections.</li>
         </ul>
-        <div className="grid grid-cols-3 gap-4">
-          <ImageWithFallback src={img_99268e4159} alt="Feature showcase 1" className="w-full h-32 object-cover rounded-lg" />
-          <ImageWithFallback src={img_79d010f0e0} alt="Feature showcase 2" className="w-full h-32 object-cover rounded-lg" />
-          <ImageWithFallback src={img_fea9d31ed7} alt="Feature showcase 3" className="w-full h-32 object-cover rounded-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ImageWithFallback src={img_99268e4159} alt="Feature showcase 1" className="w-full h-40 object-cover rounded-2xl" />
+          <ImageWithFallback src={img_79d010f0e0} alt="Feature showcase 2" className="w-full h-40 object-cover rounded-2xl" />
+          <ImageWithFallback src={img_fea9d31ed7} alt="Feature showcase 3" className="w-full h-40 object-cover rounded-2xl" />
         </div>
       </section>
 
       {/* AI Tools */}
-      <section className={`max-w-3xl mx-auto mb-16 px-4 py-8 rounded-2xl ${glass}`}>
+      <section className={`max-w-3xl mx-auto mb-16 rounded-3xl ${glass} ${sectionPad}`}> 
         <div className="flex items-center gap-3 mb-4">
           <Bot className={`w-6 h-6 ${accent}`} />
           <h2 className={`text-2xl font-bold ${textMain}`}>AI Tools in Design Process</h2>
@@ -165,15 +176,15 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
           <li className={textSubtle}><b>Midjourney &amp; Figma Make:</b> Quick concept illustrations and UI mockups.</li>
           <li className={textSubtle}><b>Notion AI:</b> Organizing and summarizing research data.</li>
         </ul>
-        <div className="grid grid-cols-3 gap-4 mt-4">
-          <ImageWithFallback src={netflixFigmaMake} alt="Figma Make Prototyping" className="w-full h-24 object-cover rounded-lg" />
-          <ImageWithFallback src={netflixBrain} alt="Imagem Ilustrativa" className="w-full h-24 object-cover rounded-lg" />
-          <ImageWithFallback src={netflixNotionAi} alt="AI design tool 3" className="w-full h-24 object-cover rounded-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+          <ImageWithFallback src={netflixFigmaMake} alt="Figma Make Prototyping" className="w-full h-28 object-cover rounded-2xl" />
+          <ImageWithFallback src={netflixBrain} alt="Imagem Ilustrativa" className="w-full h-28 object-cover rounded-2xl" />
+          <ImageWithFallback src={netflixNotionAi} alt="AI design tool 3" className="w-full h-28 object-cover rounded-2xl" />
         </div>
       </section>
 
       {/* Cognitive Biases */}
-      <section className={`max-w-3xl mx-auto mb-16 px-4 py-8 rounded-2xl ${glass}`}>
+      <section className={`max-w-3xl mx-auto mb-16 rounded-3xl ${glass} ${sectionPad}`}> 
         <div className="flex items-center gap-3 mb-4">
           <Brain className={`w-6 h-6 ${accent}`} />
           <h2 className={`text-2xl font-bold ${textMain}`}>Cognitive Biases Applied</h2>
@@ -184,40 +195,42 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
           <li className={textSubtle}><b>Mere Exposure Effect:</b> Familiaridade aumenta o conforto.</li>
           <li className={textSubtle}><b>Choice Paralysis:</b> Menos opções visíveis, seleção curada.</li>
         </ul>
-        <div className="grid grid-cols-2 gap-4 mt-4">
-          <ImageWithFallback src={img_99268e4159} alt="Cognitive bias research 1" className="w-full h-32 object-cover rounded-lg" />
-          <ImageWithFallback src={img_c9dcde7592} alt="Cognitive bias research 2" className="w-full h-32 object-cover rounded-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+          <ImageWithFallback src={img_99268e4159} alt="Cognitive bias research 1" className="w-full h-32 object-cover rounded-2xl" />
+          <ImageWithFallback src={img_c9dcde7592} alt="Cognitive bias research 2" className="w-full h-32 object-cover rounded-2xl" />
         </div>
       </section>
 
       {/* Impact & Results */}
-      <section className={`max-w-3xl mx-auto mb-20 px-4 py-8 rounded-2xl ${glass}`}>
+      <section className={`max-w-3xl mx-auto mb-20 rounded-3xl ${glass} ${sectionPad}`}> 
         <h2 className={`text-2xl font-bold mb-4 ${textMain}`}>Impact &amp; Results</h2>
-        <div className="grid grid-cols-2 gap-6">
-          <div className={`rounded-lg p-4 flex flex-col items-center ${glassCard}`}>
-            <span className={`text-3xl font-bold ${accent}`}>29%</span>
-            <span className={`text-base ${textSubtle}`}>Reduction in average time-to-choice</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className={`rounded-2xl ${cardPad} flex flex-col items-center ${glassCard}`}> 
+            <span className={`text-4xl font-extrabold ${accent}`}>29%</span>
+            <span className={`text-lg ${textSubtle}`}>Reduction in average time-to-choice</span>
           </div>
-          <div className={`rounded-lg p-4 flex flex-col items-center ${glassCard}`}>
-            <span className={`text-3xl font-bold ${accent}`}>39%</span>
-            <span className={`text-base ${textSubtle}`}>Increase in confidence of choice</span>
+          <div className={`rounded-2xl ${cardPad} flex flex-col items-center ${glassCard}`}> 
+            <span className={`text-4xl font-extrabold ${accent}`}>39%</span>
+            <span className={`text-lg ${textSubtle}`}>Increase in confidence of choice</span>
           </div>
-          <div className={`rounded-lg p-4 flex flex-col items-center ${glassCard}`}>
-            <span className={`text-3xl font-bold ${accent}`}>2.1x</span>
-            <span className={`text-base ${textSubtle}`}>Fewer decision-reversals</span>
+          <div className={`rounded-2xl ${cardPad} flex flex-col items-center ${glassCard}`}> 
+            <span className={`text-4xl font-extrabold ${accent}`}>2.1x</span>
+            <span className={`text-lg ${textSubtle}`}>Fewer decision-reversals</span>
           </div>
-          <div className={`rounded-lg p-4 flex flex-col items-center ${glassCard}`}>
-            <span className={`text-3xl font-bold ${accent}`}>75%</span>
-            <span className={`text-base ${textSubtle}`}>Stated reduction in choice frustrations</span>
+          <div className={`rounded-2xl ${cardPad} flex flex-col items-center ${glassCard}`}> 
+            <span className={`text-4xl font-extrabold ${accent}`}>75%</span>
+            <span className={`text-lg ${textSubtle}`}>Stated reduction in choice frustrations</span>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-8 flex justify-center">
+      <footer className="w-full py-10 flex justify-center bg-transparent">
         <button
           onClick={onBack}
-          className={`px-8 py-3 rounded-lg font-semibold ${glassCard} focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-all duration-300`}
+          className={theme === 'day'
+            ? `px-10 py-4 rounded-xl bg-blue-700 text-white text-lg font-bold shadow-lg hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-all duration-300`
+            : `px-8 py-3 rounded-lg font-semibold ${glassCard} focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-all duration-300`}
         >
           Back to Portfolio
         </button>
