@@ -58,13 +58,23 @@ export function Header({ theme = 'night' }: HeaderProps) {
           </a>
           <button
             onClick={toggleLanguage}
-            className={`px-6 py-2 rounded-lg backdrop-blur-xl border transition-all duration-300 ${
+            className={`px-6 py-2 rounded-lg backdrop-blur-xl border transition-all duration-300 flex items-center gap-2 ${
               theme === 'night'
                 ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30'
                 : 'bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30'
             }`}
           >
-            {i18n.language === 'en' ? 'PT' : 'EN'}
+            {i18n.language === 'en' ? (
+              <>
+                <span>🇧🇷</span>
+                <span>PT</span>
+              </>
+            ) : (
+              <>
+                <span>🇺🇸</span>
+                <span>EN</span>
+              </>
+            )}
           </button>
         </div>
       </div>
