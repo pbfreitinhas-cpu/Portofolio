@@ -40,7 +40,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       className={`group relative overflow-hidden rounded-2xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer font-satoshi ${
         theme === 'night'
           ? 'bg-white/5 border-white/10 hover:border-[#DBF1FD]/30'
-          : 'bg-white/60 border-white/30 hover:border-blue-500/40 shadow-lg'
+          : 'bg-gradient-to-br from-blue-50/95 to-blue-100/85 border-blue-200/60 hover:border-blue-400/70 shadow-[0_8px_24px_rgba(59,130,246,0.15)] hover:shadow-[0_12px_32px_rgba(59,130,246,0.25)]'
       }`}
     >
       <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
@@ -54,7 +54,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       <div className={`absolute inset-0 flex flex-col justify-end p-8 transition-all duration-300 ${
         theme === 'night'
           ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
-          : 'bg-gradient-to-t from-blue-900/70 via-blue-900/30 to-transparent group-hover:from-blue-900/85 group-hover:via-blue-900/50 group-hover:to-transparent'
+          : 'bg-gradient-to-t from-blue-600/75 via-blue-500/40 to-transparent group-hover:from-blue-700/85 group-hover:via-blue-600/60 group-hover:to-transparent'
       }`}>
         <h3 className={`text-2xl mb-2 font-bold transition-all duration-300 ${
           theme === 'night'

@@ -15,7 +15,11 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
       transition={{ duration: 0.6, delay: 0.6 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="relative px-6 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)] overflow-hidden"
+      className={`relative px-6 py-3 rounded-full backdrop-blur-xl border shadow-lg cursor-pointer transition-all duration-500 overflow-hidden ${
+        theme === 'day'
+          ? 'bg-gradient-to-r from-yellow-400/70 to-yellow-300/70 border-yellow-500/80 text-yellow-900 font-bold shadow-[0_0_25px_rgba(250,204,21,0.6)] hover:shadow-[0_0_35px_rgba(250,204,21,0.8)]'
+          : 'bg-yellow-400/20 border-yellow-400/40 text-yellow-300 shadow-[0_0_20px_rgba(250,204,21,0.3)]'
+      }`}
     >
       {/* Main content - theme icon + text */}
       <div className="flex items-center gap-2">
