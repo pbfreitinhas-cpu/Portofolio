@@ -37,7 +37,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
 
   const overlayClasses = theme === 'night'
     ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
-    : 'bg-gradient-to-t from-blue-900/85 via-blue-700/60 to-blue-500/20 group-hover:from-blue-900/95 group-hover:via-blue-700/75 group-hover:to-blue-500/30';
+    : 'bg-gradient-to-t from-slate-900/95 via-blue-900/85 to-blue-700/40 group-hover:from-slate-900/98 group-hover:via-blue-900/92 group-hover:to-blue-700/50';
 
   const titleClasses = theme === 'night'
     ? 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(219,241,253,0.4)]'
@@ -47,7 +47,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
     ? 'text-amber-200 group-hover:text-amber-100 drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(255,200,100,0.5)]'
     : theme === 'night'
       ? 'text-[#DBF1FD] group-hover:text-[#E8F8FF] drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(219,241,253,0.3)]'
-      : 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(165,242,255,0.6)] text-lg font-semibold';
+      : 'text-white group-hover:text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] text-lg font-bold';
 
   return (
     <motion.div
