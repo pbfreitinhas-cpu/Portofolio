@@ -46,7 +46,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
   const subtitleClasses = number === 3 
     ? 'text-amber-200 group-hover:text-amber-100 drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(255,200,100,0.5)]'
     : theme === 'night'
-      ? 'text-[#DBF1FD] group-hover:text-[#E8F8FF] drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(219,241,253,0.3)]'
+      ? 'text-white group-hover:text-white drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]'
       : 'text-white group-hover:text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] text-lg font-bold';
 
   return (
