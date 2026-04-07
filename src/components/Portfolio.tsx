@@ -194,57 +194,165 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button
+            <motion.button
               onClick={() => scrollToSection('case-studies')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
-                  : 'bg-blue-700/80 border-blue-600/60 text-white hover:bg-blue-700/95 hover:border-blue-500/80 shadow-[0_8px_32px_rgba(29,78,216,0.4)] hover:shadow-[0_12px_40px_rgba(29,78,216,0.6)]'
+                  : 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400/70 text-white hover:from-teal-600 hover:to-cyan-600 shadow-[0_8px_32px_rgba(20,184,166,0.4)] hover:shadow-[0_16px_50px_rgba(8,145,178,0.6)]'
               }`}
             >
+              {/* Wave effect para day mode */}
               {theme === 'day' && (
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: [-100, 100],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "easeInOut"
-                  }}
-                />
+                <>
+                  <motion.div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                    transition={{ duration: 0.3 }}
+                  >
+                    {/* Ondas animadas */}
+                    {[0, 1, 2].map((i) => (
+                      <motion.div
+                        key={`wave-${i}`}
+                        className="absolute inset-0 rounded-xl"
+                        style={{
+                          border: `2px solid rgba(255,255,255,${0.3 - i * 0.1})`,
+                        }}
+                        animate={{
+                          scale: [1, 1.2, 1.3],
+                          opacity: [0.8, 0.4, 0],
+                        }}
+                        transition={{
+                          duration: 0.8,
+                          delay: i * 0.15,
+                          repeat: Infinity,
+                        }}
+                      />
+                    ))}
+                  </motion.div>
+
+                  {/* Bubbles flutuantes */}
+                  {[0, 1, 2, 3].map((i) => (
+                    <motion.div
+                      key={`bubble-${i}`}
+                      className="absolute w-1 h-1 bg-white/60 rounded-full"
+                      style={{
+                        left: `${20 + i * 20}%`,
+                        bottom: '-10px',
+                      }}
+                      animate={{
+                        y: [-10, -80],
+                        x: [0, Math.sin(i) * 20],
+                        opacity: [0, 1, 0],
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        delay: i * 0.2,
+                        repeat: Infinity,
+                      }}
+                    />
+                  ))}
+
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                    animate={{
+                      x: [-200, 200],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "easeInOut"
+                    }}
+                  />
+                </>
               )}
+              
               <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-50"></div>
               <span className="relative z-10">{t('viewCaseStudies')}</span>
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
               onClick={() => scrollToSection('contact')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
-                  : 'bg-blue-700/80 border-blue-600/60 text-white hover:bg-blue-700/95 hover:border-blue-500/80 shadow-[0_8px_32px_rgba(29,78,216,0.4)] hover:shadow-[0_12px_40px_rgba(29,78,216,0.6)]'
+                  : 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400/70 text-white hover:from-teal-600 hover:to-cyan-600 shadow-[0_8px_32px_rgba(20,184,166,0.4)] hover:shadow-[0_16px_50px_rgba(8,145,178,0.6)]'
               }`}
             >
+              {/* Wave effect para day mode */}
               {theme === 'day' && (
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: [-100, 100],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "easeInOut"
-                  }}
-                />
+                <>
+                  <motion.div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                    transition={{ duration: 0.3 }}
+                  >
+                    {/* Ondas animadas */}
+                    {[0, 1, 2].map((i) => (
+                      <motion.div
+                        key={`wave2-${i}`}
+                        className="absolute inset-0 rounded-xl"
+                        style={{
+                          border: `2px solid rgba(255,255,255,${0.3 - i * 0.1})`,
+                        }}
+                        animate={{
+                          scale: [1, 1.2, 1.3],
+                          opacity: [0.8, 0.4, 0],
+                        }}
+                        transition={{
+                          duration: 0.8,
+                          delay: i * 0.15,
+                          repeat: Infinity,
+                        }}
+                      />
+                    ))}
+                  </motion.div>
+
+                  {/* Bubbles flutuantes */}
+                  {[0, 1, 2, 3].map((i) => (
+                    <motion.div
+                      key={`bubble2-${i}`}
+                      className="absolute w-1 h-1 bg-white/60 rounded-full"
+                      style={{
+                        left: `${20 + i * 20}%`,
+                        bottom: '-10px',
+                      }}
+                      animate={{
+                        y: [-10, -80],
+                        x: [0, Math.sin(i) * 20],
+                        opacity: [0, 1, 0],
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        delay: i * 0.2,
+                        repeat: Infinity,
+                      }}
+                    />
+                  ))}
+
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                    animate={{
+                      x: [-200, 200],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "easeInOut"
+                    }}
+                  />
+                </>
               )}
+              
               <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-50"></div>
               <span className="relative z-10">{t('moreAboutMe')}</span>
-            </button>
+            </motion.button>
           </motion.div>
         </div>
       </section>
