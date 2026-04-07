@@ -33,7 +33,9 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
     ? 'bg-white/5 border-white/10 hover:border-[#DBF1FD]/30'
     : 'bg-white/40 border-2 border-white/70 hover:border-white/100 shadow-[0_15px_45px_rgba(30,144,255,0.25)] hover:shadow-[0_20px_60px_rgba(30,144,255,0.4)]';
 
-  const imageOpacity = theme === 'day' ? 'opacity-45 group-hover:opacity-65' : 'opacity-60 group-hover:opacity-80';
+  const imageOpacity = theme === 'day'
+    ? 'opacity-45 group-hover:opacity-65'
+    : 'opacity-60 group-hover:opacity-80';
 
   const overlayClasses = theme === 'night'
     ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
@@ -45,9 +47,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
 
   const subtitleClasses = number === 3 
     ? 'text-amber-200 group-hover:text-amber-100 drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(255,200,100,0.5)]'
-    : theme === 'night'
-      ? 'text-white group-hover:text-white drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]'
-      : 'text-white group-hover:text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] text-lg font-bold';
+    : 'text-white group-hover:text-white drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] text-lg font-bold';
 
   return (
     <motion.div
@@ -63,9 +63,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       {theme === 'day' && (
         <motion.div
           className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100"
-          animate={{
-            x: [-100, 100],
-          }}
+          animate={{ x: [-100, 100] }}
           transition={{
             duration: 0.6,
             repeat: Infinity,
