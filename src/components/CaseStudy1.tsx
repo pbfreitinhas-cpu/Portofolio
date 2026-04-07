@@ -121,7 +121,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                 theme === 'night' ? 'text-white/70' : 'text-blue-900/80'
               }`}
             >
-              Designing a simplified music control interface that minimizes driver distraction and cognitive load, keeping eyes on the road and hands on the wheel
+              aaaaaDesigning a simplified music control interface that minimizes driver distraction and cognitive load, keeping eyes on the road and hands on the wheel
             </motion.p>
           </motion.div>
 

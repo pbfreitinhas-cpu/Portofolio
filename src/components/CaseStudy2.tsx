@@ -180,7 +180,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 ${theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'}`}
             >
               <h2 className={`text-3xl mb-6 font-bold transition-colors duration-500 ${theme === 'night' ? 'text-white' : 'text-gray-900'}`}>
-                aaaaBackground &amp; Problem
+                Background &amp; Problem
               </h2>
               <p className={`leading-relaxed mb-4 transition-colors duration-500 ${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
                 style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.5rem', padding: '0.5rem 1rem' } : {}}
