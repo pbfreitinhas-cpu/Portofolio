@@ -31,23 +31,23 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
 
   const cardClasses = theme === 'night'
     ? 'bg-white/5 border-white/10 hover:border-[#DBF1FD]/30'
-    : 'bg-gradient-to-br from-indigo-500/70 via-blue-500/60 to-cyan-400/50 border-indigo-400/90 hover:border-indigo-300/100 shadow-[0_12px_40px_rgba(99,102,241,0.4)] hover:shadow-[0_16px_50px_rgba(79,70,229,0.5)]';
+    : 'bg-white/40 border-2 border-white/70 hover:border-white/100 shadow-[0_15px_45px_rgba(30,144,255,0.25)] hover:shadow-[0_20px_60px_rgba(30,144,255,0.4)]';
 
-  const imageOpacity = theme === 'day' ? 'opacity-50 group-hover:opacity-70' : 'opacity-60 group-hover:opacity-80';
+  const imageOpacity = theme === 'day' ? 'opacity-45 group-hover:opacity-65' : 'opacity-60 group-hover:opacity-80';
 
   const overlayClasses = theme === 'night'
     ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
-    : 'bg-gradient-to-t from-indigo-950/90 via-indigo-900/60 to-transparent group-hover:from-indigo-950/95 group-hover:via-indigo-900/75 group-hover:to-transparent';
+    : 'bg-gradient-to-t from-blue-900/85 via-blue-700/60 to-blue-500/20 group-hover:from-blue-900/95 group-hover:via-blue-700/75 group-hover:to-blue-500/30';
 
   const titleClasses = theme === 'night'
     ? 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(219,241,253,0.4)]'
-    : 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]';
+    : 'text-white group-hover:text-white drop-shadow-xl group-hover:drop-shadow-[0_0_16px_rgba(100,200,255,0.6)] text-3xl';
 
   const subtitleClasses = number === 3 
-    ? 'text-yellow-300 group-hover:text-yellow-200 drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(253,224,71,0.3)]'
+    ? 'text-amber-200 group-hover:text-amber-100 drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(255,200,100,0.5)]'
     : theme === 'night'
       ? 'text-[#DBF1FD] group-hover:text-[#E8F8FF] drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(219,241,253,0.3)]'
-      : 'text-blue-200 group-hover:text-blue-100 drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(191,219,254,0.3)]';
+      : 'text-cyan-100 group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(165,242,255,0.6)] text-lg';
 
   return (
     <motion.div
@@ -55,10 +55,26 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: number * 0.1 }}
-      whileHover={{ scale: 1.01, y: -4 }}
+      whileHover={theme === 'day' ? { scale: 1.05, y: -8 } : { scale: 1.01, y: -4 }}
       onClick={onClick}
       className={`group relative overflow-hidden rounded-2xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer font-satoshi ${cardClasses}`}
     >
+      {/* Shine effect for day mode */}
+      {theme === 'day' && (
+        <motion.div
+          className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100"
+          animate={{
+            x: [-100, 100],
+          }}
+          transition={{
+            duration: 0.6,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut"
+          }}
+        />
+      )}
+
       <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
         <ImageWithFallback
           src={imageUrl}
