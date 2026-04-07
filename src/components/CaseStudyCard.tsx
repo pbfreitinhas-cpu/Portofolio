@@ -40,22 +40,24 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
       className={`group relative overflow-hidden rounded-2xl backdrop-blur-xl border transition-all duration-300 w-full cursor-pointer font-satoshi ${
         theme === 'night'
           ? 'bg-white/5 border-white/10 hover:border-[#DBF1FD]/30'
-          : 'bg-gradient-to-br from-blue-400/40 to-cyan-300/30 border-blue-400/60 hover:border-blue-500/80 shadow-[0_8px_32px_rgba(59,130,246,0.25)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.35)]'
+          : 'bg-gradient-to-br from-indigo-500/70 via-blue-500/60 to-cyan-400/50 border-indigo-400/90 hover:border-indigo-300/100 shadow-[0_12px_40px_rgba(99,102,241,0.4)] hover:shadow-[0_16px_50px_rgba(79,70,229,0.5)]'
       }`}
     >
       <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
         <ImageWithFallback
           src={imageUrl}
           alt={current.title}
-          className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            theme === 'day' ? 'opacity-50 group-hover:opacity-70' : 'opacity-60 group-hover:opacity-80'
+          }`}
         />
       </div>
 
       <div className={`absolute inset-0 flex flex-col justify-end p-8 transition-all duration-300 ${
         theme === 'night'
           ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/85 group-hover:via-black/50 group-hover:to-transparent'
-          : 'bg-gradient-to-t from-blue-800/80 via-blue-700/40 to-transparent group-hover:from-blue-900/90 group-hover:via-blue-800/60 group-hover:to-transparent'
-      }`}>
+          : 'bg-gradient-to-t from-indigo-950/90 via-indigo-900/60 to-transparent group-hover:from-indigo-950/95 group-hover:via-indigo-900/75 group-hover:to-transparent'
+      }`>
         <h3 className={`text-2xl mb-2 font-bold transition-all duration-300 ${
           theme === 'night'
             ? 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(219,241,253,0.4)]'
