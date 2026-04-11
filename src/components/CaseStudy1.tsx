@@ -228,7 +228,9 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             </div>
 
             {/* Image Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className={`grid grid-cols-2 md:grid-cols-3 ${
+              theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
+            }`}>
               <motion.div
                 whileHover={{ scale: 1.05, y: -4 }}
                 transition={{ duration: 0.3 }}
@@ -392,7 +394,9 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             </motion.div>
 
             {/* Research Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className={`grid grid-cols-1 md:grid-cols-3 ${
+              theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
+            }`}>
               {[
                 { img: competitorspotify, alt: "Competitor analysis - Spotify" },
                 { img: surveyspotify, alt: "User survey findings" },
@@ -492,7 +496,9 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   }`}
                 />
               </motion.div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className={`grid grid-cols-1 md:grid-cols-2 ${
+                theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
+              }`}>
                 <motion.div
                   whileHover={{ scale: 1.02, y: -4 }}
                   className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
@@ -616,7 +622,9 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             </div>
 
             {/* AI Tools Images */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className={`grid grid-cols-1 md:grid-cols-2 ${
+              theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
+            }`}>
               <motion.div
                 whileHover={{ scale: 1.05, y: -8 }}
                 className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
