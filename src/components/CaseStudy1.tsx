@@ -155,7 +155,9 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24"
+            className={`grid grid-cols-1 md:grid-cols-3 mb-24 transition-all duration-300 ${
+              theme === 'night' ? 'gap-6' : 'gap-6 md:gap-8 lg:gap-10'
+            }`}
           >
             {[
               { label: 'Role', value: 'UX/UI Designer', icon: Target },
@@ -169,13 +171,13 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className={`backdrop-blur-[20px] border-2 rounded-2xl p-8 transition-all duration-300 group ${
+                className={`backdrop-blur-[20px] border-2 rounded-2xl transition-all duration-300 group ${
                   theme === 'night'
-                    ? 'bg-white/5 border-white/10 hover:bg-white/8 hover:border-white/20 hover:shadow-lg'
-                    : 'bg-white/60 border-white/80 hover:bg-white/75 hover:border-blue-300/60 hover:shadow-[0_12px_40px_rgba(100,150,255,0.25)]'
+                    ? 'bg-white/5 border-white/10 p-8 hover:bg-white/8 hover:border-white/20 hover:shadow-lg'
+                    : 'bg-white/60 border-white/80 px-7 py-8 md:px-8 md:py-9 min-h-[176px] flex flex-col hover:bg-white/75 hover:border-blue-300/60 hover:shadow-[0_12px_40px_rgba(100,150,255,0.25)]'
                 }`}
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className={`flex items-center gap-3 ${theme === 'night' ? 'mb-4' : 'mb-6'}`}>
                   <div className={`w-10 h-10 rounded-lg backdrop-blur-xl border flex items-center justify-center transition-all duration-300 ${
                     theme === 'night'
                       ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30 group-hover:bg-[#DBF1FD]/20'
@@ -191,7 +193,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                 </div>
                 <p className={`transition-colors duration-300 font-medium text-base leading-relaxed ${
                   theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
-                }`}>{item.value}</p>
+                } ${theme === 'day' ? 'pr-2 mt-auto' : ''}`}>{item.value}</p>
               </motion.div>
             ))}
           </motion.div>
