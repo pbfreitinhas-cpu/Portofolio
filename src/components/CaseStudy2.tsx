@@ -146,28 +146,33 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
+              className={`grid grid-cols-1 md:grid-cols-3 mb-20 transition-all duration-500 ${
+                theme === "night" ? "gap-8" : "gap-6 md:gap-8 lg:gap-10"
+              }`}
             >
-              <div className={`backdrop-blur-xl rounded-2xl p-6 border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/80 border-gray-200 shadow'}
+              <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
+                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
               `}>
-                <h3 className={`mb-3 font-semibold uppercase tracking-wide text-sm
+                <h3 className={`font-semibold uppercase tracking-wide text-sm
+                  ${theme === 'night' ? 'mb-3' : 'mb-5'}
                   ${theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'}`}>Role</h3>
-                <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium'}`}>UX/UI Designer</p>
+                <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>UX/UI Designer</p>
               </div>
-              <div className={`backdrop-blur-xl rounded-2xl p-6 border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/80 border-gray-200 shadow'}
+              <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
+                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
               `}>
-                <h3 className={`mb-3 font-semibold uppercase tracking-wide text-sm
+                <h3 className={`font-semibold uppercase tracking-wide text-sm
+                  ${theme === 'night' ? 'mb-3' : 'mb-5'}
                   ${theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'}`}>Timeline</h3>
-                <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium'}`}>12 weeks</p>
+                <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>12 weeks</p>
               </div>
-              <div className={`backdrop-blur-xl rounded-2xl p-6 border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/80 border-gray-200 shadow'}
+              <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
+                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
               `}>
-                <h3 className={`mb-3 font-semibold uppercase tracking-wide text-sm
+                <h3 className={`font-semibold uppercase tracking-wide text-sm
+                  ${theme === 'night' ? 'mb-3' : 'mb-5'}
                   ${theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'}`}>Tools</h3>
-                <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium'}`}>Figma, ChatGPT, UX Gears</p>
+                <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>Figma, ChatGPT, UX Gears</p>
               </div>
             </motion.div>
 
