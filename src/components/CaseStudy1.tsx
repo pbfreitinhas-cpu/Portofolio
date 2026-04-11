@@ -11,7 +11,7 @@ import personagptspotify from '../assets/personas-gpt-spotify.png';
 import cognitivespotify from '../assets/cognitive-spotify.png';
 
 import { motion } from "motion/react";
-import { ArrowLeft, Bot, Brain, Sparkles, Zap, Target, BarChart3, CheckCircle } from "lucide-react";
+import { ArrowLeft, Bot, Brain, Sparkles, BarChart3, CheckCircle } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useTranslation } from 'react-i18next';
 
@@ -155,47 +155,34 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`grid grid-cols-1 md:grid-cols-3 mb-24 transition-all duration-500 ${
-              theme === 'night' ? 'gap-8' : 'gap-6 md:gap-8 lg:gap-10'
+            className={`grid grid-cols-1 md:grid-cols-3 mb-20 transition-all duration-500 ${
+              theme === "night" ? "gap-8" : "gap-6 md:gap-8 lg:gap-10"
             }`}
           >
-            {[
-              { label: 'Role', value: 'UX/UI Designer', icon: Target },
-              { label: 'Timeline', value: '8 weeks', icon: Zap },
-              { label: 'Tools', value: 'Figma, Hotjar, Analytics, ChatGPT', icon: Sparkles }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className={`backdrop-blur-[20px] rounded-2xl transition-all duration-300 group ${
-                  theme === 'night'
-                    ? 'bg-white/5 border border-white/10 p-6 min-h-[168px] flex flex-col justify-between hover:bg-white/8 hover:border-white/20 hover:shadow-lg'
-                    : 'bg-white/80 border border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between hover:bg-white/90 hover:border-blue-300/60 hover:shadow-[0_12px_40px_rgba(100,150,255,0.18)]'
-                }`}
-              >
-                <div className={`flex items-center gap-3 ${theme === 'night' ? 'mb-3' : 'mb-5'}`}>
-                  <div className={`w-10 h-10 rounded-lg backdrop-blur-xl border flex items-center justify-center transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30 group-hover:bg-[#DBF1FD]/20'
-                      : 'bg-blue-400/30 border-blue-400/60 group-hover:bg-blue-400/40'
-                  }`}>
-                    <item.icon className={`w-5 h-5 transition-colors duration-300 ${
-                      theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
-                    }`} />
-                  </div>
-                  <h3 className={`font-semibold uppercase tracking-wide text-sm transition-colors duration-300 ${
-                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
-                  }`}>{item.label}</h3>
-                </div>
-                <p className={`transition-colors duration-300 font-medium text-base leading-relaxed ${
-                  theme === 'night' ? 'text-white/70' : 'text-gray-900 pr-2'
-                }`}>{item.value}</p>
-              </motion.div>
-            ))}
+            <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
+              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+            `}>
+              <h3 className={`font-semibold uppercase tracking-wide text-sm
+                ${theme === 'night' ? 'mb-3' : 'mb-5'}
+                ${theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'}`}>Role</h3>
+              <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>UX/UI Designer</p>
+            </div>
+            <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
+              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+            `}>
+              <h3 className={`font-semibold uppercase tracking-wide text-sm
+                ${theme === 'night' ? 'mb-3' : 'mb-5'}
+                ${theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'}`}>Timeline</h3>
+              <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>8 weeks</p>
+            </div>
+            <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
+              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+            `}>
+              <h3 className={`font-semibold uppercase tracking-wide text-sm
+                ${theme === 'night' ? 'mb-3' : 'mb-5'}
+                ${theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'}`}>Tools</h3>
+              <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>Figma, Hotjar, Analytics, ChatGPT</p>
+            </div>
           </motion.div>
 
           {/* Problem Section */}
