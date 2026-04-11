@@ -191,10 +191,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 mb-24 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
@@ -215,16 +213,12 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             </div>
 
             {/* Image Grid */}
-            <div className={`grid grid-cols-2 md:grid-cols-3 ${
-              theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
-            }`}>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <motion.div
                 whileHover={{ scale: 1.05, y: -4 }}
                 transition={{ duration: 0.3 }}
-                className={`col-span-2 md:col-span-2 rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                className={`col-span-2 md:col-span-2 rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                 }`}
               >
                 <ImageWithFallback
@@ -238,10 +232,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               <motion.div
                 whileHover={{ scale: 1.05, y: -4 }}
                 transition={{ duration: 0.3 }}
-                className={`col-span-2 md:col-span-1 rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                className={`col-span-2 md:col-span-1 rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                 }`}
               >
                 <ImageWithFallback
@@ -261,10 +253,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 mb-24 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
@@ -277,7 +267,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               "How do you minimize attention without minimizing control?"
             </p>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-3 mb-8">
               {[
                 "The challenge was to reduce visual and interaction load, while maintaining access to key music functions — all in a way that is effortless during driving.",
                 "The design had to work in motion, often with one hand, poor lighting, or even voice-only input.",
@@ -290,19 +280,14 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  whileHover={{ x: 8 }}
-                  className={`flex items-start gap-4 p-4 rounded-xl backdrop-blur-xl border transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10 hover:bg-white/8'
-                      : 'bg-blue-400/15 border-blue-300/40 hover:bg-blue-400/25'
-                  }`}
+                  className="flex items-start gap-3"
                 >
-                  <div className={`w-2 h-2 rounded-full mt-3 flex-shrink-0 ${
-                    theme === 'night' ? 'bg-[#DBF1FD]' : 'bg-blue-600'
+                  <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
+                    theme === 'night' ? 'bg-[#DBF1FD]' : 'bg-blue-500'
                   }`}></div>
-                  <p className={`transition-colors duration-1000 leading-relaxed font-medium text-base ${
-                    theme === 'night' ? 'text-white/80' : 'text-blue-900/85'
-                  }`}>{text}</p>
+                  <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
+                    style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.5rem', padding: '0.25rem 0.75rem' } : {}}
+                  >{text}</p>
                 </motion.div>
               ))}
             </div>
@@ -352,10 +337,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 mb-24 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
@@ -367,10 +350,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className={`backdrop-blur-xl border rounded-2xl p-6 mb-8 transition-all duration-300 ${
-                theme === 'night'
-                  ? 'bg-white/5 border-white/10'
-                  : 'bg-blue-400/20 border-blue-400/50'
+              className={`backdrop-blur-xl border rounded-xl p-5 mb-8 transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
               }`}
             >
               <p className={`leading-relaxed text-base transition-colors duration-1000 font-medium ${
@@ -381,9 +362,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             </motion.div>
 
             {/* Research Grid */}
-            <div className={`grid grid-cols-1 md:grid-cols-3 ${
-              theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
-            }`}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { img: competitorspotify, alt: "Competitor analysis - Spotify" },
                 { img: surveyspotify, alt: "User survey findings" },
@@ -396,10 +375,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   whileHover={{ scale: 1.05, y: -8 }}
-                  className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10'
-                      : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                  className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                   }`}
                 >
                   <ImageWithFallback
@@ -420,10 +397,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 mb-24 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
@@ -436,7 +411,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               We designed a new <span className={`font-bold ${theme === 'day' ? 'text-blue-700' : 'text-[#DBF1FD]'}`}>Driver Mode</span>: a focused, minimalistic version of Spotify's mobile experience optimized for on-the-go use with zero distractions.
             </p>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-3 mb-8">
               {[
                 "The interface features oversized buttons, swipe-based navigation, and one-touch access to critical actions like 'Quick Play,' 'Favorites,' and 'Recently Played.'",
                 "Voice command support allows drivers to skip, search, or play content without lifting a finger.",
@@ -449,18 +424,14 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className={`flex items-start gap-4 p-4 rounded-xl backdrop-blur-xl border transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10'
-                      : 'bg-blue-400/15 border-blue-300/40'
-                  }`}
+                  className="flex items-start gap-3"
                 >
                   <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-600'
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-500'
                   }`} />
-                  <p className={`transition-colors duration-1000 leading-relaxed font-medium text-base ${
-                    theme === 'night' ? 'text-white/80' : 'text-blue-900/85'
-                  }`}>{text}</p>
+                  <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
+                    style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.5rem', padding: '0.25rem 0.75rem' } : {}}
+                  >{text}</p>
                 </motion.div>
               ))}
             </div>
@@ -469,10 +440,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             <div className="space-y-4">
               <motion.div
                 whileHover={{ scale: 1.02, y: -4 }}
-                className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                 }`}
               >
                 <ImageWithFallback
@@ -483,15 +452,11 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   }`}
                 />
               </motion.div>
-              <div className={`grid grid-cols-1 md:grid-cols-2 ${
-                theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
-              }`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <motion.div
                   whileHover={{ scale: 1.02, y: -4 }}
-                  className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10'
-                      : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                  className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                   }`}
                 >
                   <ImageWithFallback
@@ -504,10 +469,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.02, y: -4 }}
-                  className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10'
-                      : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                  className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                   }`}
                 >
                   <ImageWithFallback
@@ -528,10 +491,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 mb-24 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <div className="flex items-center gap-3 mb-8">
@@ -560,10 +521,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             <div className="space-y-4 mb-8">
               <motion.div
                 whileHover={{ x: 8 }}
-                className={`backdrop-blur-xl border-2 rounded-xl p-6 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-blue-400/15 border-blue-300/40'
+                className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
                 }`}>
                 <h4 className={`font-bold mb-2 text-lg transition-colors duration-1000 ${
                   theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
@@ -576,10 +535,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               </motion.div>
               <motion.div
                 whileHover={{ x: 8 }}
-                className={`backdrop-blur-xl border-2 rounded-xl p-6 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-blue-400/15 border-blue-300/40'
+                className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
                 }`}>
                 <h4 className={`font-bold mb-2 text-lg transition-colors duration-1000 ${
                   theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
@@ -592,10 +549,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               </motion.div>
               <motion.div
                 whileHover={{ x: 8 }}
-                className={`backdrop-blur-xl border-2 rounded-xl p-6 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-blue-400/15 border-blue-300/40'
+                className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
                 }`}>
                 <h4 className={`font-bold mb-2 text-lg transition-colors duration-1000 ${
                   theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
@@ -609,15 +564,11 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             </div>
 
             {/* AI Tools Images */}
-            <div className={`grid grid-cols-1 md:grid-cols-2 ${
-              theme === 'night' ? 'gap-4' : 'gap-6 md:gap-8'
-            }`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <motion.div
                 whileHover={{ scale: 1.05, y: -8 }}
-                className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                 }`}>
                 <ImageWithFallback
                   src={figmaMakespotify}
@@ -629,10 +580,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05, y: -8 }}
-                className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                  theme === 'night'
-                    ? 'bg-white/5 border-white/10'
-                    : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+                className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
                 }`}>
                 <ImageWithFallback
                   src={personagptspotify}
@@ -651,10 +600,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 mb-24 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <div className="flex items-center gap-3 mb-8">
@@ -692,10 +639,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.02, y: -4 }}
-                  className={`backdrop-blur-xl border-2 rounded-xl p-6 transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10'
-                      : 'bg-blue-400/15 border-blue-300/40'
+                className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
                   }`}>
                   <h4 className={`font-bold mb-2 text-lg transition-colors duration-1000 ${
                     theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
@@ -712,10 +657,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             {/* Cognitive Research Image */}
             <motion.div
               whileHover={{ scale: 1.03, y: -8 }}
-              className={`rounded-2xl overflow-hidden backdrop-blur-xl border-2 transition-all duration-300 ${
-                theme === 'night'
-                  ? 'bg-white/5 border-white/10'
-                  : 'bg-white/40 border-white/70 shadow-[0_8px_24px_rgba(100,150,255,0.15)]'
+              className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
               }`}>
               <ImageWithFallback
                 src={cognitivespotify}
@@ -733,10 +676,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`backdrop-blur-[20px] border-2 rounded-3xl p-10 transition-all duration-300 ${
-              theme === 'night'
-                ? 'bg-white/5 border-white/10'
-                : 'bg-white/60 border-white/80 shadow-[0_12px_40px_rgba(100,150,255,0.15)]'
+            className={`backdrop-blur-xl rounded-2xl p-8 border transition-colors duration-500 ${
+              theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
             }`}
           >
             <div className="flex items-center gap-3 mb-8">
@@ -769,11 +710,8 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -8 }}
-                  className={`backdrop-blur-xl border-2 rounded-xl p-6 transition-all duration-300 ${
-                    theme === 'night'
-                      ? 'bg-white/5 border-white/10'
-                      : 'bg-blue-400/20 border-blue-300/60'
+                  className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
                   }`}>
                   <div className={`text-5xl font-bold mb-3 transition-colors duration-1000 ${
                     theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
