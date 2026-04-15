@@ -136,11 +136,11 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                 : 'bg-white/50 border-white/70 shadow-[0_20px_60px_rgba(100,150,255,0.25)]'
             }`}
           >
-            <div className="relative overflow-hidden bg-gradient-to-b from-blue-100/50 to-transparent">
+            <div className="relative overflow-hidden bg-gradient-to-b from-blue-100/50 to-transparent rounded-2xl">
               <img
                 src={theme === 'day' ? introducaoSpotifyDay : capaspotify}
                 alt="Spotify Driver Mode - Case Study Hero"
-                className="w-full aspect-[16/9] object-cover"
+                className="w-full aspect-[16/9] object-cover rounded-2xl"
               />
             </div>
           </motion.div>
@@ -161,7 +161,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
             }`}
           >
             <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
-              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow p-6'}
             `}>
               <h3 className={`font-semibold uppercase tracking-wide text-sm
                 ${theme === 'night' ? 'mb-3' : 'mb-5'}
@@ -169,7 +169,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>UX/UI Designer</p>
             </div>
             <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
-              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow p-6'}
             `}>
               <h3 className={`font-semibold uppercase tracking-wide text-sm
                 ${theme === 'night' ? 'mb-3' : 'mb-5'}
@@ -177,7 +177,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>8 weeks</p>
             </div>
             <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
-              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+              ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow p-6'}
             `}>
               <h3 className={`font-semibold uppercase tracking-wide text-sm
                 ${theme === 'night' ? 'mb-3' : 'mb-5'}

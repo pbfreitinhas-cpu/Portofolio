@@ -18,7 +18,7 @@ import netflixNotionAi from "../assets/notion-ai-netlfix.png";
 
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { ArrowLeft, Bot, Brain } from "lucide-react";
+import { ArrowLeft, Bot, Brain, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface CaseStudy2Props {
@@ -85,61 +85,83 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           onClick={onBack}
-          className={`fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 rounded-lg backdrop-blur-xl border transition-all duration-300 ${
-            theme === "night"
-              ? "bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30"
-              : "bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30"
+          className={`fixed top-8 left-8 z-50 flex items-center gap-2 px-6 py-3 rounded-2xl backdrop-blur-2xl border transition-all duration-300 font-medium text-sm ${
+            theme === 'night'
+              ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30 hover:shadow-lg'
+              : 'bg-white/70 border-white/80 text-blue-900 hover:bg-white/85 hover:border-blue-300/60 hover:shadow-[0_8px_32px_rgba(100,150,255,0.15)]'
           }`}
-          style={{ fontFamily: "'Shadows Into Light', cursive" }}
         >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back</span>
+          <ArrowLeft className="w-5 h-5" />
+          <span>{t('Back')}</span>
         </motion.button>
 
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-6 py-20">
-          <div className="max-w-5xl mx-auto">
+        <section className={`min-h-screen flex items-center justify-center px-6 ${theme === 'day' ? 'py-24' : 'py-20'}`}>
+          <div className={`max-w-5xl mx-auto ${theme === 'day' ? 'w-full' : ''}`}>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: theme === 'day' ? 40 : 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
+              transition={{ duration: 0.8, ...(theme === 'day' ? { ease: "easeOut" } : {}) }}
+              className={`text-center ${theme === 'day' ? 'mb-16' : 'mb-12'}`}
             >
-              <div className="inline-block px-4 py-2 rounded-full backdrop-blur-xl bg-[#DBF1FD]/10 border border-[#DBF1FD]/30 text-[#DBF1FD] mb-6">
+              <motion.div
+                {...(theme === 'day' ? {
+                  initial: { scale: 0.9, opacity: 0 },
+                  animate: { scale: 1, opacity: 1 },
+                  transition: { duration: 0.6, delay: 0.1 }
+                } : {})}
+                className={`inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-xl border mb-8 transition-all duration-1000 font-medium text-sm ${
+                  theme === 'night'
+                    ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30 text-[#DBF1FD]'
+                    : 'bg-gradient-to-r from-blue-400/40 to-cyan-300/40 border-blue-400/60 text-blue-900 shadow-[0_8px_24px_rgba(100,150,255,0.2)]'
+                }`}>
+                {theme === 'day' && <Sparkles className="w-4 h-4" />}
                 Case Study #2
-              </div>
-              <h1
-                className={`text-5xl md:text-6xl lg:text-7xl mb-6 font-bold transition-colors duration-500
-                  ${theme === 'night' ? 'text-white' : 'text-gray-900'}`}
+              </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ...(theme === 'day' ? { delay: 0.2 } : {}) }}
+                className={`${theme === 'day' ? 'text-5xl md:text-7xl lg:text-8xl font-bold mb-8 transition-colors duration-1000 leading-tight' : 'text-5xl md:text-6xl lg:text-7xl mb-6 font-bold transition-colors duration-500'}
+                  ${theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'}`}
+                style={theme === 'day' ? { fontFamily: "'Playfair Display', serif", letterSpacing: '-0.02em' } : undefined}
               >
                 {t("netflixChoiceOverload")}
-              </h1>
-              <p
-                className={`text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed transition-colors duration-500
-                  ${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
-                style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.75rem', padding: '0.75rem 1.25rem', boxShadow: '0 2px 16px rgba(0,0,0,0.04)' } : {}}
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ...(theme === 'day' ? { delay: 0.3 } : {}) }}
+                className={`${theme === 'day' ? 'text-lg md:text-xl' : 'text-xl md:text-2xl'} max-w-3xl mx-auto leading-relaxed transition-colors ${theme === 'day' ? 'duration-1000' : 'duration-500'}
+                  ${theme === 'night' ? 'text-white/70' : 'text-blue-900/80'}`}
               >
-                Reimagining Netflix’s discovery flow to tackle choice overload with personalization, simplicity, and cognitive-aware design.
-              </p>
+                Reimagining Netflix's discovery flow to tackle choice overload with personalization, simplicity, and cognitive-aware design.
+              </motion.p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10"
+              transition={{ duration: 0.8, ...(theme === 'day' ? { delay: 0.4 } : { delay: 0.2 }) }}
+              className={`rounded-3xl overflow-hidden backdrop-blur-2xl border-2 transition-all duration-300 ${
+                theme === 'night'
+                  ? 'bg-white/5 border-white/10'
+                  : 'bg-white/50 border-white/70 shadow-[0_20px_60px_rgba(100,150,255,0.25)]'
+              }`}
             >
-              <ImageWithFallback
-                src={image_b638cdda55459d4c3742759cd4c4287b03a2d0e2}
-                alt="Case Study Hero"
-                className="w-full aspect-[16/9] object-cover"
-              />
+              <div className="relative overflow-hidden bg-gradient-to-b from-blue-100/50 to-transparent rounded-2xl">
+                <ImageWithFallback
+                  src={image_b638cdda55459d4c3742759cd4c4287b03a2d0e2}
+                  alt="Case Study Hero"
+                  className={`w-full aspect-[16/9] object-cover ${theme === 'day' ? 'rounded-2xl' : ''}`}
+                />
+              </div>
             </motion.div>
           </div>
         </section>
 
         {/* Overview Section */}
-        <section className="py-20 px-6">
+        <section className="py-24 px-6">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -151,7 +173,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               }`}
             >
               <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow p-6'}
               `}>
                 <h3 className={`font-semibold uppercase tracking-wide text-sm
                   ${theme === 'night' ? 'mb-3' : 'mb-5'}
@@ -159,7 +181,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>UX/UI Designer</p>
               </div>
               <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow p-6'}
               `}>
                 <h3 className={`font-semibold uppercase tracking-wide text-sm
                   ${theme === 'night' ? 'mb-3' : 'mb-5'}
@@ -167,7 +189,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-900 font-medium leading-relaxed pr-2'}`}>12 weeks</p>
               </div>
               <div className={`backdrop-blur-xl rounded-2xl border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow px-7 py-8 md:px-8 md:py-9 min-h-[168px] flex flex-col justify-between'}
+                ${theme === 'night' ? 'bg-white/5 border-white/10 p-6' : 'bg-white/80 border-gray-200 shadow p-6'}
               `}>
                 <h3 className={`font-semibold uppercase tracking-wide text-sm
                   ${theme === 'night' ? 'mb-3' : 'mb-5'}
