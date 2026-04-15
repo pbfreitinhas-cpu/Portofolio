@@ -198,7 +198,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               onClick={() => scrollToSection('case-studies')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
+              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-playfair text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
                   : 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400/70 text-white hover:from-teal-600 hover:to-cyan-600 shadow-[0_8px_32px_rgba(20,184,166,0.4)] hover:shadow-[0_16px_50px_rgba(8,145,178,0.6)]'
@@ -278,7 +278,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
               onClick={() => scrollToSection('contact')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-satoshi text-lg font-semibold ${
+              className={`group relative px-8 py-4 rounded-xl backdrop-blur-2xl border transition-all duration-300 w-full sm:w-auto overflow-hidden font-playfair text-lg font-semibold ${
                 theme === 'night'
                   ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
                   : 'bg-gradient-to-r from-teal-500 to-cyan-500 border-teal-400/70 text-white hover:from-teal-600 hover:to-cyan-600 shadow-[0_8px_32px_rgba(20,184,166,0.4)] hover:shadow-[0_16px_50px_rgba(8,145,178,0.6)]'
@@ -358,7 +358,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       </section>
 
       {/* Case Studies Section */}
-<section id="case-studies" className="py-20 px-6 bg-[rgba(0,0,0,0)] font-satoshi">
+<section id="case-studies" className="py-20 px-6 bg-[rgba(0,0,0,0)] font-playfair">
   <div className="max-w-5xl mx-auto">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -436,7 +436,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
 </section>
 
       {/* About & Tools Section */}
-      <section className="py-20 px-6 font-satoshi">
+      <section className="py-20 px-6 font-playfair">
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl mx-auto">
             {/* About Me Card */}
@@ -475,7 +475,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       </section>
 
       {/* Contact Footer Section */}
-      <section id="contact" className={`py-20 px-6 mt-20 transition-all duration-1000 font-satoshi ${
+      <section id="contact" className={`py-20 px-6 mt-20 transition-all duration-1000 font-playfair ${
         theme === 'night' ? 'bg-[#161C23]' : 'bg-blue-50/50'
       }`}>
         <div className="max-w-4xl mx-auto text-center">
