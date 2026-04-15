@@ -174,7 +174,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
           >
             <h1 className={`mb-6 text-4xl md:text-5xl lg:text-6xl leading-relaxed transition-colors duration-1000 ${
               theme === 'night' ? 'text-white/90' : 'text-gray-800'
-            }`}>
+            }`} style={{ fontFamily: "'Shadows Into Light', cursive" }}>
               {t('heroText')}
             </h1>
           </motion.div>

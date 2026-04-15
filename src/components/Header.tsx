@@ -29,7 +29,7 @@ export function Header({ theme = 'night' }: HeaderProps) {
         {/* Logo */}
         <div className={`text-2xl tracking-tight transition-colors duration-1000 ${
           theme === 'night' ? 'text-white' : 'text-gray-800'
-        }`}>Pedro</div>
+        }`} style={{ fontFamily: "'Shadows Into Light', cursive" }}>Pedro</div>
 
         {/* Navigation Buttons */}
         <div className="flex gap-4">
@@ -40,6 +40,7 @@ export function Header({ theme = 'night' }: HeaderProps) {
                 ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30'
                 : 'bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30'
             }`}
+            style={{ fontFamily: "'Shadows Into Light', cursive" }}
           >
             {t('About')}
           </button>
@@ -53,6 +54,7 @@ export function Header({ theme = 'night' }: HeaderProps) {
                 ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30'
                 : 'bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30'
             }`}
+            style={{ fontFamily: "'Shadows Into Light', cursive" }}
           >
             {t('Resume')}
           </a>
@@ -63,6 +65,7 @@ export function Header({ theme = 'night' }: HeaderProps) {
                 ? 'bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-[#DBF1FD]/30'
                 : 'bg-white/60 border-gray-300/40 text-gray-800 hover:bg-white/80 hover:border-blue-500/30'
             }`}
+            style={{ fontFamily: "'Shadows Into Light', cursive" }}
           >
             {i18n.language === 'en' ? (
               <>
