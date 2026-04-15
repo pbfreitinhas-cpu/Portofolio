@@ -3,6 +3,7 @@ import image_e00a28ccfb5900fb6e4768252b55aec94542958f from 'figma:asset/e00a28cc
 import image_1747b0d33ee8a253f6eb010f7db29cd7a0177bd8 from 'figma:asset/1747b0d33ee8a253f6eb010f7db29cd7a0177bd8.png';
 import image_bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf from 'figma:asset/bb7fd3ad4b0b008a08f6d2666dc5e69a75759bcf.png';
 import capaspotify from '../assets/capaspotify.png';
+import introducaoSpotifyDay from '../assets/Introducao_Spotify_Day.png';
 import competitorspotify from '../assets/Competitor-spotify.png';
 import surveyspotify from '../assets/survey-spotify.png';
 import brainstormspotify from '../assets/Brainstorm-desk-spotify.png';
@@ -137,7 +138,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
           >
             <div className="relative overflow-hidden bg-gradient-to-b from-blue-100/50 to-transparent">
               <img
-                src={capaspotify}
+                src={theme === 'day' ? introducaoSpotifyDay : capaspotify}
                 alt="Spotify Driver Mode - Case Study Hero"
                 className="w-full aspect-[16/9] object-cover"
               />
