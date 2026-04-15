@@ -30,8 +30,9 @@ export default function App() {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light:wght@400&display=swap" rel="stylesheet" />
-      <div style={{ fontFamily: "'Shadows Into Light', cursive" }}>
+      <div>
         {currentPage === 'home' && <Portfolio onCaseStudyClick={handleCaseStudyClick} theme={theme} onToggleTheme={toggleTheme} />}
         {currentPage === 'case-study-1' && <CaseStudy1 onBack={handleBackToHome} theme={theme} />}
         {currentPage === 'case-study-2' && <CaseStudy2 onBack={handleBackToHome} theme={theme} />}
