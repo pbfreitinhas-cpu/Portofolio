@@ -18,7 +18,7 @@ import netflixNotionAi from "../assets/notion-ai-netlfix.png";
 
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { ArrowLeft, Bot, Brain, Sparkles } from "lucide-react";
+import { ArrowLeft, Bot, Brain, Sparkles, BarChart3, CheckCircle } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface CaseStudy2Props {
@@ -96,44 +96,44 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
         </motion.button>
 
         {/* Hero Section */}
-        <section className={`min-h-screen flex items-center justify-center px-6 ${theme === 'day' ? 'py-24' : 'py-20'}`}>
-          <div className={`max-w-5xl mx-auto ${theme === 'day' ? 'w-full' : ''}`}>
+        <section className="min-h-screen flex items-center justify-center px-6 py-24">
+          <div className="max-w-5xl mx-auto w-full">
             <motion.div
-              initial={{ opacity: 0, y: theme === 'day' ? 40 : 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ...(theme === 'day' ? { ease: "easeOut" } : {}) }}
-              className={`text-center ${theme === 'day' ? 'mb-16' : 'mb-12'}`}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-center mb-16"
             >
               <motion.div
-                {...(theme === 'day' ? {
-                  initial: { scale: 0.9, opacity: 0 },
-                  animate: { scale: 1, opacity: 1 },
-                  transition: { duration: 0.6, delay: 0.1 }
-                } : {})}
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 className={`inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-xl border mb-8 transition-all duration-1000 font-medium text-sm ${
                   theme === 'night'
                     ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30 text-[#DBF1FD]'
                     : 'bg-gradient-to-r from-blue-400/40 to-cyan-300/40 border-blue-400/60 text-blue-900 shadow-[0_8px_24px_rgba(100,150,255,0.2)]'
                 }`}>
-                {theme === 'day' && <Sparkles className="w-4 h-4" />}
+                <Sparkles className="w-4 h-4" />
                 Case Study #2
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ...(theme === 'day' ? { delay: 0.2 } : {}) }}
-                className={`${theme === 'day' ? 'text-5xl md:text-7xl lg:text-8xl font-bold mb-8 transition-colors duration-1000 leading-tight' : 'text-5xl md:text-6xl lg:text-7xl mb-6 font-bold transition-colors duration-500'}
-                  ${theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'}`}
-                style={theme === 'day' ? { fontFamily: "'Playfair Display', serif", letterSpacing: '-0.02em' } : undefined}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 transition-colors duration-1000 leading-tight ${
+                  theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+                }`}
+                style={{ fontFamily: "'Playfair Display', serif", letterSpacing: '-0.02em' }}
               >
                 {t("netflixChoiceOverload")}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ...(theme === 'day' ? { delay: 0.3 } : {}) }}
-                className={`${theme === 'day' ? 'text-lg md:text-xl' : 'text-xl md:text-2xl'} max-w-3xl mx-auto leading-relaxed transition-colors ${theme === 'day' ? 'duration-1000' : 'duration-500'}
-                  ${theme === 'night' ? 'text-white/70' : 'text-blue-900/80'}`}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-1000 font-medium ${
+                  theme === 'night' ? 'text-white/70' : 'text-blue-900/80'
+                }`}
               >
                 Reimagining Netflix's discovery flow to tackle choice overload with personalization, simplicity, and cognitive-aware design.
               </motion.p>
@@ -142,10 +142,10 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ...(theme === 'day' ? { delay: 0.4 } : { delay: 0.2 }) }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className={`rounded-3xl overflow-hidden backdrop-blur-2xl border-2 transition-all duration-300 ${
                 theme === 'night'
-                  ? 'bg-white/5 border-white/10'
+                  ? 'bg-white/5 border-white/10 shadow-2xl'
                   : 'bg-white/50 border-white/70 shadow-[0_20px_60px_rgba(100,150,255,0.25)]'
               }`}
             >
@@ -203,12 +203,13 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500
-                ${theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'}`}
+              className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+              }`}
             >
-              <h2 className={`text-3xl mb-6 font-bold transition-colors duration-500 ${theme === 'night' ? 'text-white' : 'text-gray-900'}`}>
-                Background &amp; Problem
-              </h2>
+              <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
+                theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+              }`} style={{ fontFamily: "'Playfair Display', serif" }}>Background &amp; Problem</h2>
               <p className={`leading-relaxed mb-4 transition-colors duration-500 ${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
                 style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.5rem', padding: '0.5rem 1rem' } : {}}
               >
@@ -256,9 +257,9 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500
                 ${theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'}`}
             >
-              <h2 className={`text-3xl mb-6 font-bold transition-colors duration-500 ${theme === 'night' ? 'text-white' : 'text-gray-900'}`}>
-                Challenge &amp; Goals
-              </h2>
+              <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
+                theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+              }`} style={{ fontFamily: "'Playfair Display', serif" }}>Challenge &amp; Goals</h2>
               <p className={`leading-relaxed mb-4 transition-colors duration-500 ${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
                 style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.5rem', padding: '0.5rem 1rem' } : {}}
               >
@@ -322,9 +323,13 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 mb-20"
+              className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+              }`}
             >
-              <h2 className="text-white text-3xl mb-6">Research & Insights</h2>
+              <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
+                theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+              }`} style={{ fontFamily: "'Playfair Display', serif" }}>Research & Insights</h2>
               <div className="space-y-6 mb-8">
                 <div>
                   <h4 className="text-[#DBF1FD] mb-3">
@@ -390,9 +395,13 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 mb-20"
+              className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+              }`}
             >
-              <h2 className="text-white text-3xl mb-6">The solution</h2>
+              <h2 className={`text-4xl md:text-5xl mb-8 font-bold transition-colors duration-1000 ${
+                theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+              }`} style={{ fontFamily: "'Playfair Display', serif" }}>The Solution</h2>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
@@ -420,32 +429,53 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 </div>
               </div>
 
-              {/* Creative Image Layout - Vertical Stack with Varying Heights */}
-              <div className="space-y-4">
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="col-span-2 rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
-                    <ImageWithFallback
-                      src={image_99268e41598a0e171d946ce01b4315172dfbb4f9}
-                      alt="Feature showcase 1"
-                      className="w-full h-56 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-                    />
-                  </div>
-                  <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
-                    <ImageWithFallback
-                      src={image_79d010f0e0ac4a6050c00168acacf492fccf91ab}
-                      alt="Feature showcase 2"
-                      className="w-full h-56 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-                    />
-                  </div>
-                </div>
-                <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
+            {/* Solution Images */}
+            <div className="space-y-4">
+              <motion.div
+                whileHover={{ scale: 1.02, y: -4 }}
+                className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
+                }`}
+              >
+                <ImageWithFallback
+                  src={image_99268e41598a0e171d946ce01b4315172dfbb4f9}
+                  alt="Feature showcase 1"
+                  className={`w-full h-64 object-cover transition-opacity duration-300 ${
+                    theme === 'day' ? 'opacity-80 hover:opacity-95' : 'opacity-60 hover:opacity-80'
+                  }`}
+                />
+              </motion.div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
+                  }`}
+                >
+                  <ImageWithFallback
+                    src={image_79d010f0e0ac4a6050c00168acacf492fccf91ab}
+                    alt="Feature showcase 2"
+                    className={`w-full h-48 object-cover transition-opacity duration-300 ${
+                      theme === 'day' ? 'opacity-80 hover:opacity-95' : 'opacity-60 hover:opacity-80'
+                    }`}
+                  />
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                    theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
+                  }`}
+                >
                   <ImageWithFallback
                     src={image_fea9d31ed7fa8e2e11ae50204ca6f102a3f60184}
                     alt="Feature showcase 3"
-                    className="w-full h-40 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
+                    className={`w-full h-48 object-cover transition-opacity duration-300 ${
+                      theme === 'day' ? 'opacity-80 hover:opacity-95' : 'opacity-60 hover:opacity-80'
+                    }`}
                   />
-                </div>
+                </motion.div>
               </div>
+            </div>
             </motion.div>
 
             <motion.div
@@ -453,72 +483,86 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 mb-20"
+              className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+              }`}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl backdrop-blur-xl bg-[#DBF1FD]/10 border border-[#DBF1FD]/30 flex items-center justify-center">
-                  <Bot className="w-6 h-6 text-[#DBF1FD]" />
-                </div>
-                <h2 className="text-white text-3xl">
-                  AI Tools in Design Process
-                </h2>
+              <div className="flex items-center gap-3 mb-8">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-12 h-12 rounded-xl backdrop-blur-xl border flex items-center justify-center transition-all duration-300 ${
+                    theme === 'night'
+                      ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30'
+                      : 'bg-blue-400/30 border-blue-400/60'
+                  }`}>
+                  <Bot className={`w-6 h-6 transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`} />
+                </motion.div>
+                <h2 className={`text-4xl md:text-5xl font-bold transition-colors duration-1000 ${
+                  theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+                }`} style={{ fontFamily: "'Playfair Display', serif" }}>AI Tools in Design Process</h2>
               </div>
-              <p className="text-white/70 leading-relaxed mb-6">
-                This project was built on AI integration from the ground up. AI
-                tools not only assisted in the design process but became core
-                components of the design system itself, creating a
-                self-improving ecosystem.
+              <p className={`leading-relaxed mb-8 text-lg transition-colors duration-1000 font-medium ${
+                theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+              }`}>
+                This project was built on AI integration from the ground up. AI tools not only assisted in the design process but became core components of the design system itself, creating a self-improving ecosystem.
               </p>
               <div className="space-y-4 mb-8">
-                <div>
-                  <h4 className="text-[#DBF1FD] mb-2">
-                    ChatGPT: User Research
-                  </h4>
-                  <p className="text-white/70 leading-relaxed">
-                    Used to brainstorm ideas and assist with summarizing user research (e.g., condensing interview notes), which sped up the ideation and analysis process.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-[#DBF1FD] mb-2">
-                    Midjourney and Figma Make: Quick Prototyping
-                  </h4>
-                  <p className="text-white/70 leading-relaxed">
-                    Employed for quick concept illustrations and UI mockups. AI-generated visuals helped the team rapidly explore and communicate design ideas.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-[#DBF1FD] mb-2">
-                    Notion AI: Manage Data
-                  </h4>
-                  <p className="text-white/70 leading-relaxed">
-                    Utilized to organize and summarize research data. It automatically highlighted common themes in user feedback, allowing us to make informed design decisions faster.
-                  </p>
-                </div>
+                {[
+                  {
+                    title: "ChatGPT: User Research",
+                    description: "Used to brainstorm ideas and assist with summarizing user research (e.g., condensing interview notes), which sped up the ideation and analysis process."
+                  },
+                  {
+                    title: "Midjourney and Figma Make: Quick Prototyping",
+                    description: "Employed for quick concept illustrations and UI mockups. AI-generated visuals helped the team rapidly explore and communicate design ideas."
+                  },
+                  {
+                    title: "Notion AI: Manage Data",
+                    description: "Utilized to organize and summarize research data. It automatically highlighted common themes in user feedback, allowing us to make informed design decisions faster."
+                  }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ x: 8 }}
+                    className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                      theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
+                    }`}>
+                    <h4 className={`font-bold mb-2 text-lg transition-colors duration-1000 ${
+                      theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                    }`}>{item.title}</h4>
+                    <p className={`leading-relaxed transition-colors duration-1000 font-medium ${
+                      theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                    }`}>
+                      {item.description}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
 
               {/* Creative Image Layout - Three Column */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
-                  <ImageWithFallback
-                    src={netflixFigmaMake}
-                    alt="Figma Make Prototyping"
-                    className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
-                  <ImageWithFallback
-                    src={netflixBrain}
-                    alt="Imagem Ilustrativa"
-                    className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10">
-                  <ImageWithFallback
-                    src={netflixNotionAi}
-                    alt="AI design tool 3"
-                    className="w-full h-48 object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-                  />
-                </div>
+                {[
+                  { src: netflixFigmaMake, alt: "Figma Make Prototyping" },
+                  { src: netflixBrain, alt: "Imagem Ilustrativa" },
+                  { src: netflixNotionAi, alt: "AI design tool 3" }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ scale: 1.05, y: -8 }}
+                    className={`rounded-xl overflow-hidden backdrop-blur-xl border transition-colors duration-500 ${
+                      theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200 shadow'
+                    }`}>
+                    <ImageWithFallback
+                      src={item.src}
+                      alt={item.alt}
+                      className={`w-full h-56 object-cover transition-opacity duration-300 ${
+                        theme === 'day' ? 'opacity-80 hover:opacity-95' : 'opacity-60 hover:opacity-80'
+                      }`}
+                    />
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
 
@@ -527,19 +571,29 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 mb-20"
+              className={`backdrop-blur-xl rounded-2xl p-8 mb-20 border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+              }`}
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl backdrop-blur-xl bg-[#DBF1FD]/10 border border-[#DBF1FD]/30 flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-[#DBF1FD]" />
-                </div>
-                <h2 className="text-white text-3xl">
-                  Cognitive Biases Applied
-                </h2>
+              <div className="flex items-center gap-3 mb-8">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-12 h-12 rounded-xl backdrop-blur-xl border flex items-center justify-center transition-all duration-300 ${
+                    theme === 'night'
+                      ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30'
+                      : 'bg-blue-400/30 border-blue-400/60'
+                  }`}>
+                  <Brain className={`w-6 h-6 transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`} />
+                </motion.div>
+                <h2 className={`text-4xl md:text-5xl font-bold transition-colors duration-1000 ${
+                  theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+                }`} style={{ fontFamily: "'Playfair Display', serif" }}>Cognitive Biases Applied</h2>
               </div>
-              <p className="text-white/70 leading-relaxed mb-6">
-                
-              </p>
+              <p className={`leading-relaxed mb-6 transition-colors duration-1000 font-medium ${
+                theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+              }`}>
               <div className="space-y-4 mb-8">
                 <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
                   <h4 className="text-[#DBF1FD] mb-2">Confirmation Bias</h4>
@@ -597,47 +651,73 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8"
+              className={`backdrop-blur-xl rounded-2xl p-8 border transition-colors duration-500 ${
+                theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+              }`}
             >
-              <h2 className="text-white text-3xl mb-6">Impact &amp; Results</h2>
+              <div className="flex items-center gap-3 mb-8">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-12 h-12 rounded-xl backdrop-blur-xl border flex items-center justify-center transition-all duration-300 ${
+                    theme === 'night'
+                      ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/30'
+                      : 'bg-blue-400/30 border-blue-400/60'
+                  }`}>
+                  <BarChart3 className={`w-6 h-6 transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`} />
+                </motion.div>
+                <h2 className={`text-4xl md:text-5xl font-bold transition-colors duration-1000 ${
+                  theme === 'night' ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-700'
+                }`} style={{ fontFamily: "'Playfair Display', serif" }}>Impact &amp; Results</h2>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">29%</div>
-                  <p className="text-white/70">Reduction in average time-to-choice</p>
-                </div>
-                <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">39%</div>
-                  <p className="text-white/70">
-                    Increase in confidence of choice
-                  </p>
-                </div>
-                <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">2.1x</div>
-                  <p className="text-white/70">
-                    Fewer decision-reversals
-                  </p>
-                </div>
-                <div>
-                  <div className="text-4xl text-[#DBF1FD] mb-2">75%</div>
-                  <p className="text-white/70">
-                    Stated reduction in choice frustrations
-                  </p>
-                </div>
+                {[
+                  { number: "29%", description: "Reduction in average time-to-choice" },
+                  { number: "39%", description: "Increase in confidence of choice" },
+                  { number: "2.1x", description: "Fewer decision-reversals" },
+                  { number: "75%", description: "Stated reduction in choice frustrations" }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    className={`backdrop-blur-xl border rounded-xl p-5 transition-colors duration-500 ${
+                      theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/85 border-gray-200'
+                    }`}>
+                    <div className={`text-5xl font-bold mb-3 transition-colors duration-1000 ${
+                      theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                    }`}>{item.number}</div>
+                    <p className={`text-base font-medium transition-colors duration-1000 ${
+                      theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                    }`}>{item.description}</p>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Footer Navigation */}
-        <section className="py-12 px-6 bg-[#161C23]">
+        <section className={`py-12 px-6 transition-all duration-1000 ${
+          theme === 'night' ? 'bg-[#161C23]' : 'bg-white/40 backdrop-blur-xl border-t-2 border-white/60'
+        }`}>
           <div className="max-w-4xl mx-auto text-center">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={onBack}
-              className="px-8 py-4 rounded-xl backdrop-blur-2xl bg-[#DBF1FD]/10 border border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)] transition-all duration-300"
-              style={{ fontFamily: "'Shadows Into Light', cursive" }}
+              className={`px-8 py-4 rounded-2xl backdrop-blur-2xl border-2 font-semibold transition-all duration-300 ${
+                theme === 'night'
+                  ? 'bg-[#DBF1FD]/10 border-[#DBF1FD]/40 text-[#DBF1FD] hover:bg-[#DBF1FD]/20 hover:shadow-[0_0_30px_rgba(219,241,253,0.3)]'
+                  : 'bg-blue-500/30 border-blue-500/60 text-blue-900 hover:bg-blue-500/40 hover:shadow-[0_8px_32px_rgba(100,150,255,0.3)]'
+              }`}
             >
               Back to Portfolio
-            </button>
+            </motion.button>
           </div>
         </section>
       </div>
