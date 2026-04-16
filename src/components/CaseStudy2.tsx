@@ -593,7 +593,7 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               </div>
               <p className={`leading-relaxed mb-6 transition-colors duration-1000 font-medium ${
                 theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
-              }`}>
+              }`}></p>
               <div className="space-y-4 mb-8">
                 <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
                   <h4 className="text-[#DBF1FD] mb-2">Confirmation Bias</h4>
