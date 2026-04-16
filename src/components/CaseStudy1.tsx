@@ -12,7 +12,7 @@ import personagptspotify from '../assets/personas-gpt-spotify.png';
 import cognitivespotify from '../assets/cognitive-spotify.png';
 
 import { motion } from "motion/react";
-import { ArrowLeft, Bot, Brain, Sparkles, BarChart3, CheckCircle } from "lucide-react";
+import { ArrowLeft, Bot, Brain, Sparkles, BarChart3 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useTranslation } from 'react-i18next';
 
@@ -356,7 +356,7 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
               }`}
             >
               <p className={`leading-relaxed text-base transition-colors duration-1000 font-medium ${
-                theme === 'night' ? 'text-white/80' : 'text-blue-900/85'
+                theme === 'night' ? 'text-white' : 'text-blue-900/85'
               }`}>
                 Research focused on user behavior during commutes and driving sessions. We synthesized secondary data and user interviews (real and AI-simulated) and found that drivers spent <span className={`font-bold ${theme === 'day' ? 'text-blue-700' : 'text-[#DBF1FD]'}`}>35% more time searching for songs</span> than users in static contexts. Most reported having to look away from the road multiple times just to skip a track or access playlists. Cognitive load was especially high when browsing, and many users abandoned manual interaction altogether. These insights showed a clear need to minimize cognitive effort and limit decision points, favoring simplified navigation, predictive content, and low-effort input methods like swiping or voice.
               </p>
@@ -427,9 +427,6 @@ export function CaseStudy1({ onBack, theme = 'night' }: CaseStudy1Props) {
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-500'
-                  }`} />
                   <p className={`${theme === 'night' ? 'text-white/70' : 'text-gray-800'}`}
                     style={theme === 'day' ? { background: 'rgba(255,255,255,0.85)', borderRadius: '0.5rem', padding: '0.25rem 0.75rem' } : {}}
                   >{text}</p>

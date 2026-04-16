@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Sun, Moon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface AIBadgeProps {
   theme: 'night' | 'day';
@@ -7,6 +8,7 @@ interface AIBadgeProps {
 }
 
 export function AIBadge({ theme, onToggle }: AIBadgeProps) {
+  const { t } = useTranslation();
   return (
     <motion.button
       onClick={onToggle}
@@ -73,7 +75,7 @@ export function AIBadge({ theme, onToggle }: AIBadgeProps) {
         </motion.div>
 
         {/* Text */}
-        <span className="text-sm tracking-wide drop-shadow-md">Switch Theme</span>
+        <span className="text-sm tracking-wide drop-shadow-md">{t("switchTheme")}</span>
       </div>
     </motion.button>
   );

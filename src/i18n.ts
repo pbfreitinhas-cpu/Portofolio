@@ -32,7 +32,8 @@ const resources = {
       "netflixChoiceOverload": "Netflix Choice Overload",
       "viewCaseStudy": "View Case Study →",
       "inProgress": "In progress",
-      "craftingNextExperience": "Crafting the Next Experience"
+      "craftingNextExperience": "Crafting the Next Experience",
+      "switchTheme": "Switch Theme"
     }
   },
   pt: {
@@ -62,7 +63,8 @@ const resources = {
       "netflixChoiceOverload": "Netflix Sobrecarga de Escolhas",
       "viewCaseStudy": "Ver Estudo de Caso →",
       "inProgress": "Em andamento",
-      "craftingNextExperience": "Criando a Próxima Experiência"
+      "craftingNextExperience": "Criando a Próxima Experiência",
+      "switchTheme": "Mudar Tema"
     }
   }
 };
