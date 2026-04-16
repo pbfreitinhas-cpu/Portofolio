@@ -332,26 +332,38 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               }`} style={{ fontFamily: "'Playfair Display', serif" }}>Research & Insights</h2>
               <div className="space-y-6 mb-8">
                 <div>
-                  <h4 className="text-[#DBF1FD] mb-3">
+                  <h4 className={`font-bold mb-3 text-lg transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>
                     Surveys and Interviews
                   </h4>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     The survey and interview was conducted to understand viewing habits and frustrations.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-[#DBF1FD] mb-3">
+                  <h4 className={`font-bold mb-3 text-lg transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>
                     Rewatching Familiar Titles
                   </h4>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     Many people felt overwhelmed by the number of options and often ended up rewatching familiar titles instead of trying something new.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-[#DBF1FD] mb-3">
-                    Endless Scrolling and Reducce Cognitive load
+                  <h4 className={`font-bold mb-3 text-lg transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>
+                    Endless Scrolling and Reduce Cognitive Load
                   </h4>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     I also heard a strong desire for better guidance – users wanted easier ways to discover content they might enjoy without endless scrolling. These insights confirmed the need to reduce cognitive load and provide trustworthy recommendations (for example, highlighting popular or “For You” picks) to make choosing quicker and more satisfying.
                   </p>
                 </div>
@@ -404,26 +416,42 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
               }`} style={{ fontFamily: "'Playfair Display', serif" }}>The Solution</h2>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                  <p className="text-white/70">
+                  <div className={`w-2 h-2 rounded-full mt-2 transition-colors duration-1000 ${
+                    theme === 'night' ? 'bg-[#DBF1FD]' : 'bg-blue-500'
+                  }`}></div>
+                  <p className={`transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     We designed a guided, user-centric browsing experience to make choosing content effortless.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                  <p className="text-white/70">
+                  <div className={`w-2 h-2 rounded-full mt-2 transition-colors duration-1000 ${
+                    theme === 'night' ? 'bg-[#DBF1FD]' : 'bg-blue-500'
+                  }`}></div>
+                  <p className={`transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     A new “Help Me Choose” feature prompts indecisive viewers with a couple of quick questions (like mood or genre) and then instantly plays a tailored recommendation.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                  <p className="text-white/70">
+                  <div className={`w-2 h-2 rounded-full mt-2 transition-colors duration-1000 ${
+                    theme === 'night' ? 'bg-[#DBF1FD]' : 'bg-blue-500'
+                  }`}></div>
+                  <p className={`transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     The home screen was simplified to show fewer but more relevant titles at once – for example, a prominent “Top Pick for You” card – which cuts down on clutter and decision fatigue.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#DBF1FD] mt-2"></div>
-                  <p className="text-white/70">
+                  <div className={`w-2 h-2 rounded-full mt-2 transition-colors duration-1000 ${
+                    theme === 'night' ? 'bg-[#DBF1FD]' : 'bg-blue-500'
+                  }`}></div>
+                  <p className={`transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     I also added subtle social-proof cues, such as “Trending Now” labels on popular titles, to give users more confidence in their selections.
                   </p>
                 </div>
@@ -595,31 +623,55 @@ export function CaseStudy2({ onBack, theme = "night" }: CaseStudy2Props) {
                 theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
               }`}></p>
               <div className="space-y-4 mb-8">
-                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
-                  <h4 className="text-[#DBF1FD] mb-2">Confirmation Bias</h4>
-                  <p className="text-white/70 leading-relaxed">
+                <div className={`backdrop-blur-xl rounded-xl p-5 border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+                }`}>
+                  <h4 className={`mb-2 font-bold transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>Confirmation Bias</h4>
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     Aligning recommendations with each user’s viewing history, so suggestions feel personal and validated. This makes users more likely to trust and choose the content presented.
                   </p>
                 </div>
-                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
-                  <h4 className="text-[#DBF1FD] mb-2">Social Proof</h4>
-                  <p className="text-white/70 leading-relaxed">
+                <div className={`backdrop-blur-xl rounded-xl p-5 border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+                }`}>
+                  <h4 className={`mb-2 font-bold transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>Social Proof</h4>
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     Highlighting popularity (e.g. Top 10 lists, “Trending Now” badges) to signal quality. If users see others enjoying a title, they gain confidence that it’s worth watching
                   </p>
                 </div>
-                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
-                  <h4 className="text-[#DBF1FD] mb-2">
+                <div className={`backdrop-blur-xl rounded-xl p-5 border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+                }`}>
+                  <h4 className={`mb-2 font-bold transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>
                     Mere Exposure Effect
                   </h4>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     Repeatedly surfacing familiar genres, actors, or themes in the UI increases their appeal. The more a user encounters something familiar, the more comfortable they feel giving it a try.
                   </p>
                 </div>
-                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-5">
-                  <h4 className="text-[#DBF1FD] mb-2">
+                <div className={`backdrop-blur-xl rounded-xl p-5 border transition-colors duration-500 ${
+                  theme === 'night' ? 'bg-white/5 border-white/10' : 'bg-white/90 border-gray-200 shadow'
+                }`}>
+                  <h4 className={`mb-2 font-bold transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-[#DBF1FD]' : 'text-blue-700'
+                  }`}>
                     Choice Paralysis
                   </h4>
-                  <p className="text-white/70 leading-relaxed">
+                  <p className={`leading-relaxed transition-colors duration-1000 ${
+                    theme === 'night' ? 'text-white/70' : 'text-blue-900/85'
+                  }`}>
                     Reducing the number of visible options and highlighting a curated selection helps users decide faster, without feeling overwhelmed. This increases confidence and engagement with the platform.
                   </p>
                 </div>
