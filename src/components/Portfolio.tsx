@@ -421,8 +421,14 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
       {caseStudies.map((study) => (
         <div 
           key={study.id} 
-          onClick={() => study.id !== 3 && onCaseStudyClick(study.id)}
-          style={study.id === 3 ? { cursor: 'not-allowed', opacity: 0.8 } : { cursor: 'pointer' }}
+          onClick={() => {
+            if (study.id === 3) {
+              window.open('https://mikasa-neon.vercel.app', '_blank');
+            } else {
+              onCaseStudyClick(study.id);
+            }
+          }}
+          style={{ cursor: 'pointer' }}
         >
           <CaseStudyCard
             number={study.id}
