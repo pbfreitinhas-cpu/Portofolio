@@ -31,7 +31,7 @@ const resources = {
       "spotifyDriverMode": "Spotify Driver Mode",
       "netflixChoiceOverload": "Netflix Choice Overload",
       "viewCaseStudy": "View Case Study →",
-      "inProgress": "Take a quick look... ->",
+      "inProgress": "Dê uma olhada rápida... ->",
       "craftingNextExperience": "Crafting the Next Experience",
       "switchTheme": "Switch Theme"
     }

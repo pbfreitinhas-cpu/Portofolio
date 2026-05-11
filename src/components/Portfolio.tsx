@@ -38,6 +38,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
     { id: 1, imageUrl: hero1 },
     { id: 2, imageUrl: hero2 },
     { id: 3, imageUrl: hero3 },
+    { id: 4, imageUrl: hero3 },
   ];
 
   return (
@@ -424,6 +425,8 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
           onClick={() => {
             if (study.id === 3) {
               window.open('https://mikasa-neon.vercel.app', '_blank');
+            } else if (study.id === 4) {
+              window.open('https://sante-swart.vercel.app/', '_blank');
             } else {
               onCaseStudyClick(study.id);
             }

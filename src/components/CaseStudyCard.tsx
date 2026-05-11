@@ -24,6 +24,10 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
     3: {
       title: t("craftingNextExperience"),
       subtitle: t("inProgress")
+    },
+    4: {
+      title: t("craftingNextExperience"),
+      subtitle: t("inProgress")
     }
   };
 
@@ -45,7 +49,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
     ? 'text-white group-hover:text-white drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(219,241,253,0.4)]'
     : 'text-white group-hover:text-white drop-shadow-xl group-hover:drop-shadow-[0_0_16px_rgba(100,200,255,0.6)] text-3xl';
 
-  const subtitleClasses = number === 3 
+  const subtitleClasses = (number === 3 || number === 4)
     ? 'text-amber-300 group-hover:text-amber-200 drop-shadow-lg group-hover:drop-shadow-[0_0_12px_rgba(255,200,100,0.5)] font-semibold'
     : 'text-white group-hover:text-white drop-shadow-md group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] text-lg font-bold';
 
@@ -88,7 +92,7 @@ export function CaseStudyCard({ number, imageUrl, onClick, theme = 'night' }: Ca
 
         <p
           className={`transition-all duration-300 ${subtitleClasses}`}
-          style={number === 3 ? { color: '#fcd34d' } : undefined}
+          style={(number === 3 || number === 4) ? { color: '#fcd34d' } : undefined}
         >
           {current.subtitle}
         </p>
