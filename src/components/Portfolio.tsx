@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import hero1 from "../assets/fb9b27202cc8fc39ebf0c93631ee2c8f7df7a625.png";
 import hero2 from "../assets/b638cdda55459d4c3742759cd4c4287b03a2d0e2.png";
 import hero3 from "../assets/coming soon 1.png";
+import hero4 from "../assets/cardcasestudy4.png";
 
 interface PortfolioProps {
   onCaseStudyClick: (id: number) => void;
@@ -38,7 +39,7 @@ export function Portfolio({ onCaseStudyClick, theme, onToggleTheme }: PortfolioP
     { id: 1, imageUrl: hero1 },
     { id: 2, imageUrl: hero2 },
     { id: 3, imageUrl: hero3 },
-    { id: 4, imageUrl: hero3 },
+    { id: 4, imageUrl: hero4 },
   ];
 
   return (

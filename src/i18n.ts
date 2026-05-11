@@ -31,7 +31,7 @@ const resources = {
       "spotifyDriverMode": "Spotify Driver Mode",
       "netflixChoiceOverload": "Netflix Choice Overload",
       "viewCaseStudy": "View Case Study →",
-      "inProgress": "Dê uma olhada rápida... ->",
+      "inProgress": "Take a quick look... →",
       "craftingNextExperience": "Crafting the Next Experience",
       "switchTheme": "Switch Theme"
     }
@@ -62,7 +62,7 @@ const resources = {
       "spotifyDriverMode": "Spotify Modo Motorista",
       "netflixChoiceOverload": "Netflix Sobrecarga de Escolhas",
       "viewCaseStudy": "Ver Estudo de Caso →",
-      "inProgress": "Take a quick look... ->",
+      "inProgress": "Dê uma olhada rápida... →",
       "craftingNextExperience": "Criando a Próxima Experiência",
       "switchTheme": "Mudar Tema"
     }
